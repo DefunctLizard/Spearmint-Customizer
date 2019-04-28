@@ -20,7 +20,7 @@ sudo apt-get install git
 
 # install neofetch and edit .bashrc
 sudo apt install neofetch
-echo "neofetch'" >> ~/.bashrc
+echo "neofetch" >> ~/.bashrc
 
 # install xz-utils
 sudo apt-get install xz-utils
