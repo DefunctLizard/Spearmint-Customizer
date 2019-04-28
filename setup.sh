@@ -12,8 +12,14 @@
 # update packages
 sudo apt-get update
 
+# install vim
+sudo apt install vim
+
 # install git
 sudo apt-get install git
+
+# install neofetch and edit .bashrc
+sudo apt install neofetch
 
 # install xz-utils
 sudo apt-get install xz-utils
