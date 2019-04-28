@@ -4,6 +4,9 @@
 
 # THIS SCRIPT IS INTENDED FOR GNOME VERSIONS 3.30 - 3.32
 
+# update packages
+sudo apt-get update
+
 # remove background
 sudo rm /usr/share/backgrounds/mountains_lake_tops_129263_3840x2160.jpg
 
@@ -33,6 +36,12 @@ sudo apt-get purge gnome-tweaks
 
 # uninstall arc-theme
 sudo apt-get purge arc-theme
+
+# uninstall vim
+sudo apt-get purge vim
+
+# uninstall neofetch
+sudo apt-get purge neofetch
 
 # delete Flat-Remix-Blue
 rm -r Flat-Remix-Blue
