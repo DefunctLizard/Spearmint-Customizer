@@ -4,17 +4,17 @@
 
 # THIS SCRIPT IS INTENDED FOR GNOME VERSIONS 3.30 - 3.32!
 
+# update packages
+sudo apt-get update
+
 # install git
 sudo apt-get install git
 
 # install xz-utils
 sudo apt-get install xz-utils
 
-# install gnome-tweaks
-sudo apt-get install gnome-tweak-tool
-
-#install gnome-shell-extensions
-sudo apt install gnome-shell-extensions
+# install gnome-tweaks and extensions
+sudo apt-get install gnome-shell-extensions gnome-tweak-tool
 
 # install arc-theme
 sudo apt install arc-theme
