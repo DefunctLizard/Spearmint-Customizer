@@ -1,7 +1,7 @@
 #!/bin/bash
    #################################################################
    #                                                               #
-   #                 Spearmint Customizer              		         #
+   #                 Spearmint Customizer              		       #
    #                Created By Grant Handy                         #
    #       Licensed under the GNU General Public License 3.0       #
    #                                                               #
@@ -18,8 +18,11 @@ sudo apt-get install git
 # install xz-utils
 sudo apt-get install xz-utils
 
-# install gnome-tweaks and extensions
-sudo apt-get install gnome-shell-extensions gnome-tweak-tool
+# install gnome-tweaks
+sudo apt install gnome-tweak-tool
+
+# install gnome shell extensions
+sudo apt-get install gnome-shell-extensions 
 
 # install arc-theme
 sudo apt install arc-theme
