@@ -32,18 +32,25 @@ A script that installs all of the things you were going to do anyway on Ubuntu.
 
 `flat remix blue icon theme`
 ## How to Install
-Extract the downloaded .zip file to your **Downloads folder**
-
 Open up terminal (Ctrl + Alt + T) and type:
- ```
-cd /$HOME/Downloads/spearmint-customizer-master
+```
+sudo apt-get install git
+```
+Then clone the repository
+```
+git clone https://github.com/DefunctLizard/spearmint-customizer.git
+```
+Now, change directory
+```
+cd /$HOME/spearmint-customizer
 ```
 Now that you've changed directory you can make setup.sh executable like so:
 ```
 sudo chmod 775 setup.sh
 ```
 Enter your password to continue.
-finally, start the setup:
+
+Finally, start the setup:
 ```
 ./setup.sh
 ```
@@ -52,14 +59,15 @@ When prompted press `y` to accept the changes.
 ## How to Uninstall
 Open up terminal (Ctrl + Alt + T) and type:
 ```
-cd /$HOME/Downloads/spearmint-customizer-master
+cd /$HOME/spearmint-customizer
 ```
 Now that you've changed directory you can make uninstall.sh executable like so:
 ```
 sudo chmod 775 uninstall.sh
 ```
 Enter your password to continue.
-finally, start the setup:
+
+Finally, start the setup:
 ```
 ./uninstall.sh
 ```
