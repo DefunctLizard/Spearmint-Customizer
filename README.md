@@ -27,6 +27,7 @@ A script that installs all of the things you were going to do anyway on Ubuntu.
 
 ### Themes
 `arc-theme`
+
 `flat remix blue icon theme`
 ## How to Install
 Extract the downloaded .zip file to your **Downloads folder**
@@ -60,4 +61,7 @@ finally, start the setup:
 ```
 ./uninstall.sh
 ```
+When prompted press `y` to accept the changes.
+
+
 Why'd you have to do that? If there were problems with the script email me at grantshandy@gmail.com
