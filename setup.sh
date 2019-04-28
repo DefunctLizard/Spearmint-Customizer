@@ -4,9 +4,11 @@
 
 # THIS SCRIPT IS INTENDED FOR GNOME VERSIONS 3.30 - 3.32!
 
-# Install Gnome-Tweaks
+# install gnome-tweaks
 sudo apt-get install gnome-tweak-tool
-# Install arc-theme
+# install gnome-shell-extensions
+sudo apt install gnome-shell-extensions
+# install arc-theme
 sudo apt install arc-theme
 # move background to /usr/share/backgrounds
 sudo cp mountains_lake_tops_129263_3840x2160.jpg /usr/share/backgrounds
