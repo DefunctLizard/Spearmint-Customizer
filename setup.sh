@@ -22,3 +22,4 @@ gsettings set org.gnome.shell.extensions.dash-to-dock custom-theme-shrink false
 gsettings set org.gnome.shell.extensions.dash-to-dock transparency-mode DEFAULT
 gsettings set org.gnome.shell.extensions.dash-to-dock extend-height false
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
+# install dash to dock
