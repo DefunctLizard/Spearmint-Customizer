@@ -4,10 +4,10 @@
 
 # THIS SCRIPT IS INTENDED FOR GNOME VERSIONS 3.30 - 3.32
 
-# move background to /usr/share/backgrounds
+# remove background
 sudo rm /usr/share/backgrounds/mountains_lake_tops_129263_3840x2160.jpg
 
-# set background "mountains_lake_tops_129263_3840x2160.jpg"
+# set background "wart-final-ubuntu.png"
 gsettings set org.gnome.desktop.background picture-uri file:///usr/share/backgrounds/warty-final-ubuntu.png
 
 # set dock settings
@@ -27,3 +27,6 @@ sudo apt-get purge gnome-tweaks
 
 # uninstall arc-theme
 sudo apt-get purge arc-theme
+
+# delete Flat-Remix-Blue
+rm -r Flat-Remix-Blue
