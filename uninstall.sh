@@ -14,7 +14,7 @@ gsettings set org.gnome.desktop.background picture-uri file:///usr/share/backgro
 dconf reset -f /org/gnome/shell/extensions/dash-to-dock/
 
 # set theme adwatia
-gsettings set org.gnome.desktop.interface gtk-theme "Adwatia"
+gsettings set org.gnome.desktop.interface gtk-theme "Yaru"
 
 # uninstall git
 sudo apt-get purge git
