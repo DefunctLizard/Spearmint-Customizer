@@ -7,6 +7,8 @@ A script that installs all of the things you were going to do anyway on Ubuntu.
 
 `neofetch`
 
+`caffeine`
+
 `xz-utils`
 
 `gnome-tweak tool`
