@@ -1,8 +1,13 @@
 #!/bin/bash
-# Created By Grant Handy
-# SPEARMINT CUSTOMIZER
-# THIS SCRIPT IS INTENDED FOR UBUNTU 19.04 DISCO DINGO!
-# THIS SCRIPT IS INTENDED FOR GNOME VERSIONS 3.30 - 3.32!
+   #################################################################
+   #                                                               #
+   #                 Spearmint Customizer              		         #
+   #                Created By Grant Handy                         #
+   #       Licensed under the GNU General Public License 3.0       #
+   #                                                               #
+   #     https://github.com/DefunctLizard/spearmint-customizer     #
+   #                                                               #
+   #################################################################
 
 # update packages
 sudo apt-get update
