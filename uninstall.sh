@@ -22,12 +22,6 @@ gsettings set org.gnome.desktop.interface gtk-theme "Yaru"
 # set icon theme
 gsettings set org.gnome.desktop.interface icon-theme "Yaru"
 
-# uninstall git
-sudo apt-get purge git
-
-# uninstall xz-utils
-sudo apt-get purge xz-utils
-
 # uninstall gnome-shell-extensions
 sudo apt-get purge gnome-shell-extensions
 
@@ -36,12 +30,6 @@ sudo apt-get purge gnome-tweaks
 
 # uninstall arc-theme
 sudo apt-get purge arc-theme
-
-# uninstall vim
-sudo apt-get purge vim
-
-# uninstall neofetch
-sudo apt-get purge neofetch
 
 # delete Flat-Remix-Blue
 rm -r Flat-Remix-Blue
