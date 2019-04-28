@@ -7,6 +7,9 @@
 # install git
 sudo apt-get install git
 
+# install xz-utils
+sudo apt-get install xz-utils
+
 # install gnome-tweaks
 sudo apt-get install gnome-tweak-tool
 
@@ -30,6 +33,9 @@ gsettings set org.gnome.shell.extensions.dash-to-dock custom-theme-shrink false
 gsettings set org.gnome.shell.extensions.dash-to-dock transparency-mode DEFAULT
 gsettings set org.gnome.shell.extensions.dash-to-dock extend-height false
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
+
+# open the flat-remix-blue icons
+tar -xf Flat-Remix-Blue_1.90.tar.xz
 
 # install dash to dock
 git clone https://github.com/micheleg/dash-to-dock.git
