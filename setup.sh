@@ -4,6 +4,8 @@
 
 # THIS SCRIPT IS INTENDED FOR GNOME VERSIONS 3.30 - 3.32!
 
+# Install Gnome-Tweaks
+sudo apt-get install gnome-tweak-tool
 # Install arc-theme
 sudo apt install arc-theme
 # move background to /usr/share/backgrounds
