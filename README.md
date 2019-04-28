@@ -2,7 +2,7 @@
 A script that installs all of the things you were going to do anyway on Ubuntu.
 
 **This script was intended for Ubuntu 19.04 Disco Dingo only.**
-## List of Programs/Themes
+## List of Programs/Themes Included
 ### Programs
 
 `neofetch`
