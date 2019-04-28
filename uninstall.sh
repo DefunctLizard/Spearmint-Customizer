@@ -31,5 +31,8 @@ sudo apt-get purge gnome-tweaks
 # uninstall arc-theme
 sudo apt-get purge arc-theme
 
+# set icon theme
+gsettings set org.gnome.desktop.interface icon-theme "Yaru"
+
 # delete Flat-Remix-Blue
 rm -r Flat-Remix-Blue
