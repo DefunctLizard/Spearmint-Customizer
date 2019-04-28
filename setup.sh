@@ -40,5 +40,11 @@ gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
 # open the flat-remix-blue icons
 sudo tar -xf Flat-Remix-Blue_1.90.tar.xz
 
+# copy flat-remix-blue icons
+sudo cp -r Flat-Remix-Blue /usr/share/icons
+
+# set icon theme
+gsettings set org.gnome.desktop.interface icon-theme "Flat-Remix-Blue"
+
 # install dash to dock
 sudo git clone https://github.com/micheleg/dash-to-dock.git
