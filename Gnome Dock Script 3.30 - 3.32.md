@@ -1,4 +1,4 @@
-Gnome Version    3.30 - 3.32.md
+https://github.com/DefunctLizard/Spearmint-OSGnome Version    3.30 - 3.32.md
 -Dock Settings-
 
 -Run as, in terminal! one by one...
