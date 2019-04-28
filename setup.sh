@@ -24,6 +24,7 @@ sudo apt-get install git
 sudo apt install vim
 sudo apt-get install gimp
 sudo apt-get install inkscape
+sudo apt-get install caffeine
 
 # Edit .bashrc for neofetch
 echo "neofetch" >> ~/.bashrc
