@@ -53,6 +53,3 @@ sudo cp -r Flat-Remix-Blue /usr/share/icons
 
 # set icon theme
 gsettings set org.gnome.desktop.interface icon-theme "Flat-Remix-Blue"
-
-# install dash to dock
-sudo git clone https://github.com/micheleg/dash-to-dock.git
