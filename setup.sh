@@ -12,27 +12,19 @@
 # update packages
 sudo apt-get update
 
-# install vim
+# install various programs
+sudo apt install neofetch
+sudo apt-get install xz-utils
+sudo apt install gnome-tweak-tool
+sudo apt-get install gnome-shell-extensions 
+sudo apt-get install bleachbit
+sudo apt-get install VLC
+sudo apt install arc-theme
+sudo apt-get install git
 sudo apt install vim
 
-# install git
-sudo apt-get install git
-
-# install neofetch and edit .bashrc
-sudo apt install neofetch
+# Edit .bashrc for neofetch
 echo "neofetch" >> ~/.bashrc
-
-# install xz-utils
-sudo apt-get install xz-utils
-
-# install gnome-tweaks
-sudo apt install gnome-tweak-tool
-
-# install gnome shell extensions
-sudo apt-get install gnome-shell-extensions 
-
-# install arc-theme
-sudo apt install arc-theme
 
 # switch to arc-darker
 gsettings set org.gnome.desktop.interface gtk-theme "Arc-Darker"
