@@ -1,7 +1,7 @@
 #!/bin/bash
    #################################################################
    #                                                               #
-   #                 Spearmint Customizer              		       #
+   #                 Spearmint Customizer                          #
    #                Created By Grant Handy                         #
    #       Licensed under the GNU General Public License 3.0       #
    #                                                               #
@@ -22,6 +22,8 @@ sudo apt-get install VLC
 sudo apt install arc-theme
 sudo apt-get install git
 sudo apt install vim
+sudo apt-get install gimp
+sudo apt-get install inkscape
 
 # Edit .bashrc for neofetch
 echo "neofetch" >> ~/.bashrc
