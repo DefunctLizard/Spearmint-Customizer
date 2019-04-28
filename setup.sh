@@ -19,6 +19,9 @@ sudo apt-get install gnome-shell-extensions gnome-tweak-tool
 # install arc-theme
 sudo apt install arc-theme
 
+# switch to arc-darker
+gsettings set org.gnome.desktop.interface gtk-theme "Arc-Darker"
+
 # move background to /usr/share/backgrounds
 sudo cp mountains_lake_tops_129263_3840x2160.jpg /usr/share/backgrounds
 
