@@ -13,8 +13,11 @@ gsettings set org.gnome.desktop.background picture-uri file:///usr/share/backgro
 # set dock settings
 dconf reset -f /org/gnome/shell/extensions/dash-to-dock/
 
-# set theme adwatia
+# set theme Yaru
 gsettings set org.gnome.desktop.interface gtk-theme "Yaru"
+
+# set icon theme
+gsettings set org.gnome.desktop.interface icon-theme "Yaru"
 
 # uninstall git
 sudo apt-get purge git
@@ -30,9 +33,6 @@ sudo apt-get purge gnome-tweaks
 
 # uninstall arc-theme
 sudo apt-get purge arc-theme
-
-# set icon theme
-gsettings set org.gnome.desktop.interface icon-theme "Yaru"
 
 # delete Flat-Remix-Blue
 rm -r Flat-Remix-Blue
