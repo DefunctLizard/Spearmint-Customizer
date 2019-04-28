@@ -18,7 +18,7 @@ sudo apt-get install xz-utils
 sudo apt install gnome-tweak-tool
 sudo apt-get install gnome-shell-extensions 
 sudo apt-get install bleachbit
-sudo apt-get install VLC
+sudo apt-get install vlc
 sudo apt install arc-theme
 sudo apt-get install git
 sudo apt install vim
