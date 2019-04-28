@@ -38,7 +38,7 @@ gsettings set org.gnome.shell.extensions.dash-to-dock extend-height false
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
 
 # open the flat-remix-blue icons
-tar -xf Flat-Remix-Blue_1.90.tar.xz
+sudo tar -xf Flat-Remix-Blue_1.90.tar.xz
 
 # install dash to dock
-git clone https://github.com/micheleg/dash-to-dock.git
+sudo git clone https://github.com/micheleg/dash-to-dock.git
