@@ -4,7 +4,7 @@
    #                 Spearmint Customizer                          #
    #                Created By Grant Handy                         #
    #       Licensed under the GNU General Public License 3.0       #
-   #                                                               #
+   #                grantshandy@gmail.com                          #
    #     https://github.com/DefunctLizard/spearmint-customizer     #
    #                                                               #
    #################################################################
