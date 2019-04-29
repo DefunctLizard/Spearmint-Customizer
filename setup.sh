@@ -13,18 +13,18 @@
 sudo apt-get update
 
 # install various programs
-sudo apt install neofetch
-sudo apt-get install xz-utils
-sudo apt install gnome-tweak-tool
-sudo apt-get install gnome-shell-extensions 
-sudo apt-get install bleachbit
-sudo apt-get install vlc
-sudo apt install arc-theme
-sudo apt-get install git
-sudo apt install vim
-sudo apt-get install gimp
-sudo apt-get install inkscape
-sudo apt-get install caffeine
+sudo apt install neofetch -yy
+sudo apt-get install xz-utils -yy
+sudo apt install gnome-tweak-tool -yy
+sudo apt-get install gnome-shell-extensions -yy 
+sudo apt-get install bleachbit -yy
+sudo apt-get install vlc -yy
+sudo apt install arc-theme -yy
+sudo apt-get install git -yy
+sudo apt install vim -yy
+sudo apt-get install gimp -yy
+sudo apt-get install inkscape -yy
+sudo apt-get install caffeine -yy
 
 # Edit .bashrc for neofetch
 echo "neofetch" >> ~/.bashrc
