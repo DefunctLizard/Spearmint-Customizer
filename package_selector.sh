@@ -2,11 +2,13 @@
 
 zenity --list --checklist --title="Choose Packages to Install" --width="1000" --height="400" \
 --column="Select" --column="Package Name" --column="Description" \
-GIMP=( " " GIMP "Known as GIMP, GNU Image Manipulation Program is a free and open source photo editor." \ )
-if [ $GIMP = "GIMP" ]
+GIMP=$" " gimp "Known as GIMP, GNU Image Manipulation Program is a free and open source photo editor." \
+
+if [[ $GIMP == "gimp" ]]
 then 
-	sudo apt-get install $GIMP
-fi
+	sudo apt-get install $GIMP 
+fi 
+
 #" " neofetch "A command-line system information tool." \
 #" " caffeine "A status bar application able to temporarily prevent the activation of both the screensaver and the sleep powersaving mode." \
 #" " bleachbit "BleachBit is a free and open-source disk space cleaner, privacy manager, and computer system optimizer." \
