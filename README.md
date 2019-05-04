@@ -1,6 +1,17 @@
 # Spearmint-Customizer
 Spearmint Customizer is a script that installs all the things you were going to do anyway.
+
+Spearmint customizer turns the default desktop...
+
+http://imgur.com/gallery/iR4k2Gr
+
+into this:
+
+http://imgur.com/gallery/W7xo8Kg
+
+
 **SPEARMINT CUSTOMIZER ONLY WORKS WITH UBUNTU 19.04 CURRENTLY**
+
 ## Getting Started
 Spearmint customizer is easy to install, just clone and run setup.sh!
 ### Prerequisites
