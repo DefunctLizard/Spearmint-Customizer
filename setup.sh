@@ -12,7 +12,7 @@
 # update packages
 sudo apt-get update
 
-# open dialog boxes
+# open dialog box for package manager
 zenityResult=$(
   zenity --list --checklist --title="Choose Packages to Install" --width="1000" --height="400" \
          --column="Select" --column="Package Name" --column="Description" \
@@ -67,6 +67,7 @@ fi
 
 sudo apt-get install gnome-tweaks
 
+# dialog box for theme installer.
 themeResult=$(
   zenity --list --checklist --title="Choose Themes to Install" --width="1000" --height="400" \
          --column="Select" --column="Package Name" --column="Description" \
