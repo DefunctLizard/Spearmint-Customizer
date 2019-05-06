@@ -13,6 +13,7 @@
 sudo apt-get update
 sudo apt-get install xz-utils
 sudo apt-get install zenity
+sudo apt-get install gnome-tweaks
 
 # open dialog boxes
 zenityPackageResult=$(
