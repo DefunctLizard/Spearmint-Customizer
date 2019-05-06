@@ -60,8 +60,16 @@ fi
 zenityThemeResult=$(
   zenity --list --checklist --title="Choose Packages to Install" --width="1000" --height="400" \
          --column="Select" --column="Package Name" --column="Description" \
-         " " "default-theme" "The default theme looks great (improve this)." \
+         " " "default-theme" "The default theme uses arc-theme and has very nice matte icons." \
 )
+
+zenity --question --text="Are you sure you wish to install these packages: $zenityPackageResult $zenityThemeResult"
+confirmCode=$?
+
+if [ "$confirmCode" -ne 0 ]; then
+  echo "Cancelled. Thank you."
+  exit 1
+fi
 
 if [[ $zenityThemeResult == *"default-theme"* ]]; then
   sudo apt install arc-theme -yy
@@ -81,12 +89,4 @@ if [[ $zenityThemeResult == *"default-theme"* ]]; then
   sudo tar -xf Flat-Remix-Blue_1.90.tar.xz
   sudo cp -r Flat-Remix-Blue /usr/share/icons
   gsettings set org.gnome.desktop.interface icon-theme "Flat-Remix-Blue"
-fi
-
-zenity --question --text="Are you sure you wish to install these packages: $zenityPackageResult $zenityThemeResult"
-confirmCode=$?
-
-if [ "$confirmCode" -ne 0 ]; then
-  echo "Cancelled. Thank you."
-  exit 1
 fi
