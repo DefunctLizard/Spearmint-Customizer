@@ -3,11 +3,13 @@ Spearmint Customizer is a script that installs all the things you were going to 
 
 Spearmint customizer turns the default desktop...
 
-Clean Install
+Clean Install:
 ![GitHub Logo](https://i.imgur.com/2Vig7QB.png)
 
-Spearmint Customizer
-![GitHub Logo](https://i.imgur.com/2Vig7QB.png)
+into this!
+
+Spearmint Customizer:
+![GitHub Logo](https://i.imgur.com/jhSdOY9.png)
 
 **SPEARMINT CUSTOMIZER ONLY WORKS WITH UBUNTU 19.04 CURRENTLY**
 
