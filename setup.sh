@@ -25,6 +25,16 @@ zenityResult=$(
          " " inkscape "Inkscape is a free and open-source vector graphics editor." \
 )
 
+if [[ $zenityResult == " " ]]; then
+
+else
+  zenity --question --width="500" --text="Are you sure you wish to install these packages: $zenityResult"
+  confirmCode=$?
+
+  if [ "$confirmCode" -ne 0 ]; then
+    echo "Cancelled. Thank you."
+  fi
+
 # Wildcards (*) around the result will find matches.
 if [[ $zenityResult == *"gimp"* ]]; then
   sudo apt-get install gimp -yy
