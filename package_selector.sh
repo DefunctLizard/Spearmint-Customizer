@@ -10,8 +10,8 @@ zenityResult=$(
          " " inkscape "Inkscape is a free and open-source vector graphics editor." \
 )
 
-echo "These options were selected:"
-echo $zenityResult
+zenity --question \
+--text="Are you sure you wish to install these packages:" echo $zenityResult \
 
 # Wildcards (*) around the result will find matches.
 if [[ $zenityResult == *"gimp"* ]]; then
