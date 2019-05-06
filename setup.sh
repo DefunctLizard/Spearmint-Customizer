@@ -75,8 +75,9 @@ if [[ $zenityThemeResult == *"default-theme"* ]]; then
   gsettings set org.gnome.shell.extensions.dash-to-dock transparency-mode DEFAULT
   gsettings set org.gnome.shell.extensions.dash-to-dock extend-height false
   gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
-
-
+  sudo tar -xf Flat-Remix-Blue_1.90.tar.xz
+  sudo cp -r Flat-Remix-Blue /usr/share/icons
+  gsettings set org.gnome.desktop.interface icon-theme "Flat-Remix-Blue"
 fi
 
 zenity --question --text="Are you sure you wish to install these packages: $zenityPackageResult $zenityThemeResult"
