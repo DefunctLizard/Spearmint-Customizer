@@ -42,6 +42,7 @@ fi
 
 if [[ $zenityResult == *"neofetch"* ]]; then
   sudo apt install neofetch -yy
+  echo "neofetch" >> ~/.bashrc
 fi
 
 if [[ $zenityResult == *"caffeine"* ]]; then
@@ -73,9 +74,6 @@ fi
 #if [[ $zenityResult == *"template"* ]]; then
 #  *insert install here*
 #fi
-
-# Edit .bashrc for neofetch
-echo "neofetch" >> ~/.bashrc
 
 # switch to arc-darker
 gsettings set org.gnome.desktop.interface gtk-theme "Arc-Darker"
