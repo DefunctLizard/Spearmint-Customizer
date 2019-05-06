@@ -61,6 +61,7 @@ zenityThemeResult=$(
   zenity --list --checklist --title="Choose Packages to Install" --width="1000" --height="400" \
          --column="Select" --column="Package Name" --column="Description" \
          " " "default-theme" "The default theme uses arc-theme and has very nice matte icons." \
+         " " "macOS-dark-imitation" "This attempts to emulate the look and feel of macOSX mojave dark." \
 )
 
 zenity --question --text="Are you sure you wish to install these packages: $zenityPackageResult $zenityThemeResult"
@@ -69,12 +70,13 @@ confirmCode=$?
 if [ "$confirmCode" -ne 0 ]; then
   echo "Cancelled. Thank you."
   exit 1
+else
+  git clone https://github.com/DefunctLizard/spearmint-themes/
 fi
 
 if [[ $zenityThemeResult == *"default-theme"* ]]; then
   sudo apt install arc-theme -yy
   gsettings set org.gnome.desktop.interface gtk-theme "Arc-Darker"
-  git clone https://github.com/DefunctLizard/spearmint-themes/
   gsettings set org.gnome.shell.extensions.dash-to-dock show-apps-at-top true
   gsettings set org.gnome.shell.extensions.dash-to-dock running-indicator-style DEFAULT
   gsettings set org.gnome.shell.extensions.dash-to-dock custom-theme-customize-running-dots false
@@ -89,4 +91,11 @@ if [[ $zenityThemeResult == *"default-theme"* ]]; then
   sudo tar -xf Flat-Remix-Blue_1.90.tar.xz
   sudo cp -r Flat-Remix-Blue /usr/share/icons
   gsettings set org.gnome.desktop.interface icon-theme "Flat-Remix-Blue"
+fi
+
+if [[ $zenityThemeResult == *"macOS-dark-imitation"* ]]; then
+ cd /$HOME/spearmint-customizer/spearmint-themes/icons/
+ sudo tar -xf OSX_ONE9.2.tar.xz
+ sudo cp -r OSX_ONE9.2 /usr/share/icons
+ gsettings set org.gnome.desktop.interface icon-theme "OSX_ONE"
 fi
