@@ -1,8 +1,13 @@
 #!/bin/bash
-# Created By Grant Handy
-# SPEARMINT CUSTOMIZER (UNINSTALLER)
-
-# THIS SCRIPT IS INTENDED FOR GNOME VERSIONS 3.30 - 3.32
+   #################################################################
+   #                                                               #
+   #                 Spearmint Customizer                          #
+   #                Created By Grant Handy                         #
+   #       Licensed under the GNU General Public License 3.0       #
+   #                grantshandy@gmail.com                          #
+   #     https://github.com/DefunctLizard/spearmint-customizer     #
+   #                                                               #
+   #################################################################
 
 # update packages
 sudo apt-get update
@@ -21,12 +26,6 @@ gsettings set org.gnome.desktop.interface gtk-theme "Yaru"
 
 # set icon theme
 gsettings set org.gnome.desktop.interface icon-theme "Yaru"
-
-# uninstall gnome-shell-extensions
-sudo apt-get purge gnome-shell-extensions
-
-# uninstall gnome-tweaks
-sudo apt-get purge gnome-tweaks
 
 # uninstall arc-theme
 sudo apt-get purge arc-theme
