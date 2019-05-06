@@ -20,10 +20,9 @@ zenityResult=$(
          " " neofetch "A command-line system information tool." \
          " " caffeine "A status bar application able to temporarily prevent the activation of both the screensaver and the sleep powersaving mode." \
          " " bleachbit "BleachBit is a free and open-source disk space cleaner, privacy manager, and computer system optimizer." \
-         " " vlc-media-player "VLC media player is a free and open-source, portable, cross-platform media player and streaming media server." \
+         " " vlc-media-player "VLC media player is a free and open-source, portable, cross-platformsudo apt-get install atom media player and streaming media server." \
          " " vim-editor "VIM is a free and open-source command-line text editor" \
          " " inkscape "Inkscape is a free and open-source vector graphics editor." \
-         " " atom "Atom is a free and open-source text editor which can also be used as an IDE." \
 
 )
 
@@ -63,12 +62,6 @@ fi
 
 if [[ $zenityResult == *"inkscape"* ]]; then
   sudo apt-get install inkscape -yy
-fi
-
-if [[ $zenityResult == *"atom"* ]]; then
-   sudo add-apt-repository ppa:webupd8team/atom
-   sudo apt-get update
-   sudo apt-get install atom
 fi
 
 #if [[ $zenityResult == *"template"* ]]; then
