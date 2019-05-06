@@ -40,6 +40,7 @@ fi
 
 if [[ $zenityResult == *"neofetch"* ]]; then
   sudo apt install neofetch -yy
+  echo "neofetch" >> ~/.bashrc
 fi
 
 if [[ $zenityResult == *"caffeine"* ]]; then
@@ -61,6 +62,3 @@ fi
 if [[ $zenityResult == *"inkscape"* ]]; then
   sudo apt-get install inkscape -yy
 fi
-
-# Edit .bashrc for neofetch
-echo "neofetch" >> ~/.bashrc
