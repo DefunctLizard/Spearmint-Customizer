@@ -23,6 +23,8 @@ zenityResult=$(
          " " vlc-media-player "VLC media player is a free and open-source, portable, cross-platform media player and streaming media server." \
          " " vim-editor "VIM is a free and open-source command-line text editor" \
          " " inkscape "Inkscape is a free and open-source vector graphics editor." \
+         " " atom "Atom is a free and open-source text editor which can also be used as an IDE." \
+
 )
 
 zenity --question --width="500" --text="Are you sure you wish to install these packages: $zenityResult"
@@ -61,6 +63,16 @@ fi
 if [[ $zenityResult == *"inkscape"* ]]; then
   sudo apt-get install inkscape -yy
 fi
+
+if [[ $zenityResult == *"atom"* ]]; then
+   sudo add-apt-repository ppa:webupd8team/atom
+   sudo apt-get update
+   sudo apt-get install atom
+fi
+
+#if [[ $zenityResult == *"template"* ]]; then
+#  *insert install here*
+#fi
 
 # Edit .bashrc for neofetch
 echo "neofetch" >> ~/.bashrc
