@@ -1,8 +1,6 @@
 #!/bin/bash
 
-zenity --list --checklist --title="Choose Packages to Install" --width="1000" --height="400" \
---column="Select" --column="Package Name" --column="Description" \
-GIMP=$(" " gimp "Known as GIMP, GNU Image Manipulation Program is a free and open source photo editor.") \
+GIMP=$(zenity --list --checklist --title="Choose Packages to Install" --width="1000" --height="400" --column="Select" --column="Package Name" --column="Description" " " gimp " Known as GIMP, GNU Image Manipulation Program is a free and open source photo editor.")
 
 if [[ $GIMP == "gimp" ]]
 then 
