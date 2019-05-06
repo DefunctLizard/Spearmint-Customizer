@@ -13,7 +13,7 @@
 sudo apt-get update
 
 # open dialog boxes
-zenityResult=$(
+zenityPackageResult=$(
   zenity --list --checklist --title="Choose Packages to Install" --width="1000" --height="400" \
          --column="Select" --column="Package Name" --column="Description" \
          " " gimp "Known as GIMP, GNU Image Manipulation Program is a free and open source photo editor." \
@@ -25,40 +25,64 @@ zenityResult=$(
          " " inkscape "Inkscape is a free and open-source vector graphics editor." \
 )
 
-zenity --question --text="Are you sure you wish to install these packages: $zenityResult"
+# Wildcards (*) around the result will find matches.
+if [[ $zenityPackageResult == *"gimp"* ]]; then
+  sudo apt-get install gimp -yy
+fi
+
+if [[ $zenityPackageResult == *"neofetch"* ]]; then
+  sudo apt install neofetch -yy
+  echo "neofetch" >> ~/.bashrc
+fi
+
+if [[ $zenityPackageResult == *"caffeine"* ]]; then
+  sudo apt-get install caffeine -yy
+fi
+
+if [[ $zenityPackageResult == *"bleachbit"* ]]; then
+  sudo apt-get install bleachbit -yy
+fi
+
+if [[ $zenityPackageResult == *"vlc-media-player"* ]]; then
+  sudo apt-get install vlc -yy
+fi
+
+if [[ $zenityPackageResult == *"vim-editor"* ]]; then
+  sudo apt-get install vim -yy
+fi
+
+if [[ $zenityPackageResult == *"inkscape"* ]]; then
+  sudo apt-get install inkscape -yy
+fi
+
+zenityThemeResult=$(
+  zenity --list --checklist --title="Choose Packages to Install" --width="1000" --height="400" \
+         --column="Select" --column="Package Name" --column="Description" \
+         " " "default-theme" "Known as GIMP, GNU Image Manipulation Program is a free and open source photo editor." \
+)
+
+if [[ $zenityThemeResult == *"default-theme"* ]]; then
+  sudo apt install arc-theme -yy
+  gsettings set org.gnome.desktop.interface gtk-theme "Arc-Darker"
+  git clone https://github.com/DefunctLizard/spearmint-themes/
+  cd /$HOME/spearmint-themes/backgrounds/
+  sudo cp mountains_lake_tops_129263_3840x2160.jpg /usr/share/backgrounds
+  gsettings set org.gnome.desktop.background picture-uri file:///usr/share/backgrounds/mountains_lake_tops_129263_3840x2160.jpg
+  gsettings set org.gnome.shell.extensions.dash-to-dock show-apps-at-top true
+  gsettings set org.gnome.shell.extensions.dash-to-dock running-indicator-style DEFAULT
+  gsettings set org.gnome.shell.extensions.dash-to-dock custom-theme-customize-running-dots false
+  gsettings set org.gnome.shell.extensions.dash-to-dock custom-theme-shrink false
+  gsettings set org.gnome.shell.extensions.dash-to-dock transparency-mode DEFAULT
+  gsettings set org.gnome.shell.extensions.dash-to-dock extend-height false
+  gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
+
+
+fi
+
+zenity --question --text="Are you sure you wish to install these packages: $zenityPackageResult $zenityThemeResult"
 confirmCode=$?
 
 if [ "$confirmCode" -ne 0 ]; then
   echo "Cancelled. Thank you."
   exit 1
-fi
-
-# Wildcards (*) around the result will find matches.
-if [[ $zenityResult == *"gimp"* ]]; then
-  sudo apt-get install gimp -yy
-fi
-
-if [[ $zenityResult == *"neofetch"* ]]; then
-  sudo apt install neofetch -yy
-  echo "neofetch" >> ~/.bashrc
-fi
-
-if [[ $zenityResult == *"caffeine"* ]]; then
-  sudo apt-get install caffeine -yy
-fi
-
-if [[ $zenityResult == *"bleachbit"* ]]; then
-  sudo apt-get install bleachbit -yy
-fi
-
-if [[ $zenityResult == *"vlc-media-player"* ]]; then
-  sudo apt-get install vlc -yy
-fi
-
-if [[ $zenityResult == *"vim-editor"* ]]; then
-  sudo apt-get install vim -yy
-fi
-
-if [[ $zenityResult == *"inkscape"* ]]; then
-  sudo apt-get install inkscape -yy
 fi
