@@ -95,7 +95,7 @@ fi
 
 if [[ $zenityThemeResult == *"macOS-dark-imitation"* ]]; then
  cd /$HOME/spearmint-customizer/spearmint-themes/icons/
- sudo tar -xf OSX_ONE9.2.tar.xz
- sudo cp -r OSX_ONE9.2 /usr/share/icons
+ mkdir OSX_ONE
+ sudo tar -xf OSX_ONE9.2.tar.xz --directory /$HOME/spearmint-customizer/icons/OSX_ONE
  gsettings set org.gnome.desktop.interface icon-theme "OSX_ONE"
 fi
