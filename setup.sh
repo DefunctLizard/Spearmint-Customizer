@@ -65,7 +65,7 @@ if [[ $zenityThemeResult == *"default-theme"* ]]; then
   sudo apt install arc-theme -yy
   gsettings set org.gnome.desktop.interface gtk-theme "Arc-Darker"
   git clone https://github.com/DefunctLizard/spearmint-themes/
-  cd /$HOME/spearmint-themes/backgrounds/
+  cd /$HOME/spearmint-customizer/spearmint-themes/backgrounds/
   sudo cp mountains_lake_tops_129263_3840x2160.jpg /usr/share/backgrounds
   gsettings set org.gnome.desktop.background picture-uri file:///usr/share/backgrounds/mountains_lake_tops_129263_3840x2160.jpg
   gsettings set org.gnome.shell.extensions.dash-to-dock show-apps-at-top true
