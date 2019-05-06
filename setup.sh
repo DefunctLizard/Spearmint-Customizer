@@ -26,7 +26,7 @@ zenityResult=$(
 )
 
 if [[ $zenityResult == " " ]]; then
-
+" "
 else
   zenity --question --width="500" --text="Are you sure you wish to install these packages: $zenityResult"
   confirmCode=$?
