@@ -74,12 +74,16 @@ themeResult=$(
          " " spearmint "This is the default theme for spearmint customizer." \
 )
 
-zenity --question --width="500" --text="Are you sure you wish to install these packages: $zenityResult"
-confirmCode=$?
+if [[ $themeResult == " " ]]; then
+  " "
+else
+  zenity --question --width="500" --text="Are you sure you wish to install these packages: $zenityResult"
+  confirmCode=$?
 
-if [ "$confirmCode" -ne 0 ]; then
-  echo "Cancelled. Thank you."
-  exit 1
+  if [ "$confirmCode" -ne 0 ]; then
+    echo "Cancelled. Thank you."
+    exit 1
+  fi
 fi
 
 if [[ $themeResult == *"spearmint"* ]]; then
