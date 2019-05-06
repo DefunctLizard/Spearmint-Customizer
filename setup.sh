@@ -67,9 +67,6 @@ if [[ $zenityThemeResult == *"default-theme"* ]]; then
   sudo apt install arc-theme -yy
   gsettings set org.gnome.desktop.interface gtk-theme "Arc-Darker"
   git clone https://github.com/DefunctLizard/spearmint-themes/
-  cd /$HOME/spearmint-customizer/spearmint-themes/backgrounds/
-  sudo cp mountains_lake_tops_129263_3840x2160.jpg /usr/share/backgrounds
-  gsettings set org.gnome.desktop.background picture-uri file:///usr/share/backgrounds/mountains_lake_tops_129263_3840x2160.jpg
   gsettings set org.gnome.shell.extensions.dash-to-dock show-apps-at-top true
   gsettings set org.gnome.shell.extensions.dash-to-dock running-indicator-style DEFAULT
   gsettings set org.gnome.shell.extensions.dash-to-dock custom-theme-customize-running-dots false
@@ -77,6 +74,10 @@ if [[ $zenityThemeResult == *"default-theme"* ]]; then
   gsettings set org.gnome.shell.extensions.dash-to-dock transparency-mode DEFAULT
   gsettings set org.gnome.shell.extensions.dash-to-dock extend-height false
   gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
+  cd /$HOME/spearmint-customizer/spearmint-themes/backgrouds/
+  sudo cp mountains_lake_tops_129263_3840x2160.jpg /usr/share/backgrounds
+  gsettings set org.gnome.desktop.background picture-uri file:///usr/share/backgrounds/mountains_lake_tops_129263_3840x2160.jpg
+  cd /$HOME/spearmint-customizer/spearmint-themes/icons/
   sudo tar -xf Flat-Remix-Blue_1.90.tar.xz
   sudo cp -r Flat-Remix-Blue /usr/share/icons
   gsettings set org.gnome.desktop.interface icon-theme "Flat-Remix-Blue"
