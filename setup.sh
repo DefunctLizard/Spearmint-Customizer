@@ -23,16 +23,7 @@ zenityResult=$(
          " " vlc-media-player "VLC media player is a free and open-source, portable, cross-platformsudo apt-get install atom media player and streaming media server." \
          " " vim-editor "VIM is a free and open-source command-line text editor" \
          " " inkscape "Inkscape is a free and open-source vector graphics editor." \
-
 )
-
-zenity --question --width="500" --text="Are you sure you wish to install these packages: $zenityResult"
-confirmCode=$?
-
-if [ "$confirmCode" -ne 0 ]; then
-  echo "Cancelled. Thank you."
-  exit 1
-fi
 
 # Wildcards (*) around the result will find matches.
 if [[ $zenityResult == *"gimp"* ]]; then
@@ -64,33 +55,35 @@ if [[ $zenityResult == *"inkscape"* ]]; then
   sudo apt-get install inkscape -yy
 fi
 
-#if [[ $zenityResult == *"template"* ]]; then
-#  *insert install here*
-#fi
+sudo apt-get install gnome-tweaks
 
-# switch to arc-darker
-gsettings set org.gnome.desktop.interface gtk-theme "Arc-Darker"
+themeResult=$(
+  zenity --list --checklist --title="Choose Themes to Install" --width="1000" --height="400" \
+         --column="Select" --column="Package Name" --column="Description" \
+         " " spearmint "This is the default theme for spearmint customizer." \
+)
 
-# move background to /usr/share/backgrounds
-sudo cp mountains_lake_tops_129263_3840x2160.jpg /usr/share/backgrounds
+zenity --question --width="500" --text="Are you sure you wish to install these packages: $zenityResult"
+confirmCode=$?
 
-# set background "mountains_lake_tops_129263_3840x2160.jpg"
-gsettings set org.gnome.desktop.background picture-uri file:///usr/share/backgrounds/mountains_lake_tops_129263_3840x2160.jpg
+if [ "$confirmCode" -ne 0 ]; then
+  echo "Cancelled. Thank you."
+  exit 1
+fi
 
-# set dock settings
-gsettings set org.gnome.shell.extensions.dash-to-dock show-apps-at-top true
-gsettings set org.gnome.shell.extensions.dash-to-dock running-indicator-style DEFAULT
-gsettings set org.gnome.shell.extensions.dash-to-dock custom-theme-customize-running-dots false
-gsettings set org.gnome.shell.extensions.dash-to-dock custom-theme-shrink false
-gsettings set org.gnome.shell.extensions.dash-to-dock transparency-mode DEFAULT
-gsettings set org.gnome.shell.extensions.dash-to-dock extend-height false
-gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
-
-# open the flat-remix-blue icons
-sudo tar -xf Flat-Remix-Blue_1.90.tar.xz
-
-# copy flat-remix-blue icons
-sudo cp -r Flat-Remix-Blue /usr/share/icons
-
-# set icon theme
-gsettings set org.gnome.desktop.interface icon-theme "Flat-Remix-Blue"
+if [[ $themeResult == *"spearmint"* ]]; then
+  sudo apt-get install arc-theme
+  gsettings set org.gnome.desktop.interface gtk-theme "Arc-Darker"
+  sudo cp mountains_lake_tops_129263_3840x2160.jpg /usr/share/backgrounds
+  gsettings set org.gnome.desktop.background picture-uri file:///usr/share/backgrounds/mountains_lake_tops_129263_3840x2160.jpg
+  gsettings set org.gnome.shell.extensions.dash-to-dock show-apps-at-top true
+  gsettings set org.gnome.shell.extensions.dash-to-dock running-indicator-style DEFAULT
+  gsettings set org.gnome.shell.extensions.dash-to-dock custom-theme-customize-running-dots false
+  gsettings set org.gnome.shell.extensions.dash-to-dock custom-theme-shrink false
+  gsettings set org.gnome.shell.extensions.dash-to-dock transparency-mode DEFAULT
+  gsettings set org.gnome.shell.extensions.dash-to-dock extend-height false
+  gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
+  sudo tar -xf Flat-Remix-Blue_1.90.tar.xz
+  sudo cp -r Flat-Remix-Blue /usr/share/icons
+  gsettings set org.gnome.desktop.interface icon-theme "Flat-Remix-Blue"
+fi
