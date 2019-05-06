@@ -103,4 +103,5 @@ if [[ $zenityThemeResult == *"macOS-dark-imitation"* ]]; then
  gsettings set org.gnome.desktop.interface icon-theme "OSX_ONE"
  cd /$HOME/spearmint-customizer/spearmint-themes/backgrouds/
  sudo cp mojave-night.jpg /usr/share/backgrounds
+ gsettings set org.gnome.desktop.background picture-uri file:///usr/share/backgrounds/mojave-night.jpg
 fi
