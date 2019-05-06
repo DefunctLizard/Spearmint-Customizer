@@ -97,4 +97,3 @@ if [[ $themeResult == *"spearmint"* ]]; then
   sudo cp -r Flat-Remix-Blue /usr/share/icons
   gsettings set org.gnome.desktop.interface icon-theme "Flat-Remix-Blue"
 fi
-exit 1
