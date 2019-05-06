@@ -25,7 +25,7 @@ zenityResult=$(
          " " inkscape "Inkscape is a free and open-source vector graphics editor." \
 )
 
-zenity --question --text="Are you sure you wish to install these packages: $zenityResult"
+zenity --question --width="500" --text="Are you sure you wish to install these packages: $zenityResult"
 confirmCode=$?
 
 if [ "$confirmCode" -ne 0 ]; then
