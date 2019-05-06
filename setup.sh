@@ -59,7 +59,7 @@ if [[ $zenityPackageResult == *"inkscape"* ]]; then
 fi
 
 zenityThemeResult=$(
-  zenity --list --checklist --title="Choose Packages to Install" --width="1000" --height="400" \
+  zenity --list --title="Choose Packages to Install" --width="1000" --height="400" \
          --column="Select" --column="Package Name" --column="Description" \
          " " "default-theme" "The default theme uses arc-theme and has very nice matte icons." \
          " " "macOS-dark-imitation" "This attempts to emulate the look and feel of macOSX mojave dark." \
@@ -101,4 +101,6 @@ if [[ $zenityThemeResult == *"macOS-dark-imitation"* ]]; then
  cd /$HOME/spearmint-customizer/spearmint-themes/icons/OSX_ONE
  sudo cp -r OSX_ONE /usr/share/icons
  gsettings set org.gnome.desktop.interface icon-theme "OSX_ONE"
+ cd /$HOME/spearmint-customizer/spearmint-themes/backgrouds/
+ sudo cp mojave-night.jpg /usr/share/backgrounds
 fi
