@@ -62,7 +62,7 @@ zenityThemeResult=$(
   zenity --list --title="Choose Packages to Install" --width="1000" --height="400" \
          --column="Package Name" --column="Description" \
          "default-theme" "The default theme uses arc-theme and has very nice matte icons." \
-         "macOS-dark-imitation" "This attempts to emulate the look and feel of macOSX mojave dark." \
+         "macOS-dark" "This attempts to emulate the look and feel of macOSX mojave dark." \
 )
 
 zenity --question --text="Are you sure you wish to install these packages: $zenityPackageResult $zenityThemeResult"
@@ -94,7 +94,7 @@ if [[ $zenityThemeResult == *"default-theme"* ]]; then
   gsettings set org.gnome.desktop.interface icon-theme "Flat-Remix-Blue"
 fi
 
-if [[ $zenityThemeResult == *"macOS-dark-imitation"* ]]; then
+if [[ $zenityThemeResult == *"macOS-dark"* ]]; then
  cd /$HOME/spearmint-customizer/spearmint-themes/icons/
  mkdir OSX_ONE
  sudo tar -xf OSX_ONE9.2.tar.xz --directory /$HOME/spearmint-customizer/spearmint-themes/icons/OSX_ONE
