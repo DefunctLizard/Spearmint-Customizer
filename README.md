@@ -11,7 +11,9 @@ into this!
 Spearmint Customizer:
 ![spearmint](https://i.imgur.com/jhSdOY9.png)
 
-**SPEARMINT CUSTOMIZER ONLY WORKS WITH UBUNTU 19.04 CURRENTLY**
+**SPEARMINT CUSTOMIZER HAS ONLY BEEN TESTED WITH UBUNTU 19.04 CURRENTLY**
+
+Some themes may not work with older or newer versions
 
 ## Getting Started
 Spearmint customizer is easy to install, just clone and run setup.sh!
@@ -28,7 +30,7 @@ git clone https://github.com/DefunctLizard/spearmint-customizer/
 ```
 Then, make setup.sh executable:
 ```
-chmod 775 setup.sh
+chmod +x setup.sh
 ```
 Now, run setup.sh
 ```
