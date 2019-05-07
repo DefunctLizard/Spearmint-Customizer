@@ -10,11 +10,11 @@
    #################################################################
 
 # update packages and install essentials
-sudo apt-get update
-sudo apt-get install xz-utils
-sudo apt-get install zenity
-sudo apt-get install gnome-tweaks
-sudo apt install git
+sudo apt-get update -yy
+sudo apt-get install xz-utils -yy
+sudo apt-get install zenity -yy
+sudo apt-get install gnome-tweaks -yy
+sudo apt install git -yy
 
 # open dialog boxes
 zenityPackageResult=$(
@@ -95,6 +95,7 @@ if [[ $zenityThemeResult == *"default-theme"* ]]; then
 fi
 
 if [[ $zenityThemeResult == *"macOS-dark"* ]]; then
+  sudo apt-get update
   git clone https://github.com/DefunctLizard/macOS-GNOME.git
   cd /$HOME/spearmint-customizer/macOS-GNOME
   mkdir OSX_ONE
