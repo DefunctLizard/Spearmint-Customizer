@@ -105,6 +105,9 @@ if [[ $zenityThemeResult == *"macOS-dark"* ]]; then
   gsettings set org.gnome.desktop.interface icon-theme "OSX_ONE"
   cd /$HOME/spearmint-customizer/macOS-GNOME/
   sudo cp mojave-night.jpg /usr/share/backgrounds
+  sudo tar -xf Mojave-dark.tar.xz
+  sudo cp -r Mojave-dark /usr/share/themes/
+  gsettings set org.gnome.desktop.interface gtk-theme "Mojave-dark"
   gsettings set org.gnome.desktop.background picture-uri file:///usr/share/backgrounds/mojave-night.jpg
   gsettings set org.gnome.shell.extensions.dash-to-dock show-apps-at-top true
   gsettings set org.gnome.shell.extensions.dash-to-dock running-indicator-style DEFAULT
