@@ -89,9 +89,6 @@ if [[ $zenityThemeResult == *"default-theme"* ]]; then
   cd /$HOME/spearmint-customizer/spearmint-default-theme/
   sudo cp mountains_lake_tops_129263_3840x2160.jpg /usr/share/backgrounds
   gsettings set org.gnome.desktop.background picture-uri file:///usr/share/backgrounds/mountains_lake_tops_129263_3840x2160.jpg
-  cd /$HOME/spearmint-customizer/spearmint-default-theme/
-  mkdir Flat-Remix-Blue
-  cd Flat-Remix-Blue
   sudo tar -xf Flat-Remix-Blue_1.90.tar.xz
   sudo cp -r Flat-Remix-Blue /usr/share/icons
   gsettings set org.gnome.desktop.interface icon-theme "Flat-Remix-Blue"
