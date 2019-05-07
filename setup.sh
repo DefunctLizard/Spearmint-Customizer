@@ -64,6 +64,7 @@ zenityThemeResult=$(
          --column="Package Name" --column="Description" \
          "default-theme" "The default theme uses arc-theme and has very nice matte icons." \
          "macOS-dark" "This attempts to emulate the look and feel of macOSX mojave dark." \
+         "macOS-light" "This attempts to emulate the look and feel of macOSX mojave light." \
 )
 
 zenity --question --text="Are you sure you wish to install these packages: $zenityPackageResult $zenityThemeResult"
@@ -109,6 +110,31 @@ if [[ $zenityThemeResult == *"macOS-dark"* ]]; then
   sudo cp -r Mojave-dark /usr/share/themes/
   gsettings set org.gnome.desktop.interface gtk-theme "Mojave-dark"
   gsettings set org.gnome.desktop.background picture-uri file:///usr/share/backgrounds/mojave-night.jpg
+  gsettings set org.gnome.shell.extensions.dash-to-dock show-apps-at-top true
+  gsettings set org.gnome.shell.extensions.dash-to-dock running-indicator-style DEFAULT
+  gsettings set org.gnome.shell.extensions.dash-to-dock custom-theme-customize-running-dots false
+  gsettings set org.gnome.shell.extensions.dash-to-dock custom-theme-shrink false
+  gsettings set org.gnome.shell.extensions.dash-to-dock transparency-mode DEFAULT
+  gsettings set org.gnome.shell.extensions.dash-to-dock extend-height false
+  gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
+  gsettings set org.gnome.desktop.wm.preferences button-layout 'close,maximize,minimize:'
+fi
+
+if [[ $zenityThemeResult == *"macOS-light"* ]]; then
+  sudo apt-get update
+  git clone https://github.com/DefunctLizard/macOS-light-GNOME.git
+  cd /$HOME/spearmint-customizer/macOS-light-
+  mkdir OSX_ONE
+  sudo tar -xf OSX_ONE9.2.tar.xz --directory /$HOME/spearmint-customizer/macOS-light-GNOME/OSX_ONE
+  cd /$HOME/spearmint-customizer/macOS-light-GNOME/OSX_ONE
+  sudo cp -r OSX_ONE /usr/share/icons
+  gsettings set org.gnome.desktop.interface icon-theme "OSX_ONE"
+  cd /$HOME/spearmint-customizer/macOS-light-GNOME/
+  sudo cp mojave-day.jpg /usr/share/backgrounds
+  sudo tar -xf Mojave-light.tar.xz
+  sudo cp -r Mojave-light /usr/share/themes/
+  gsettings set org.gnome.desktop.interface gtk-theme "Mojave-light"
+  gsettings set org.gnome.desktop.background picture-uri file:///usr/share/backgrounds/mojave-day.jpg
   gsettings set org.gnome.shell.extensions.dash-to-dock show-apps-at-top true
   gsettings set org.gnome.shell.extensions.dash-to-dock running-indicator-style DEFAULT
   gsettings set org.gnome.shell.extensions.dash-to-dock custom-theme-customize-running-dots false
