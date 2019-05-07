@@ -60,9 +60,9 @@ fi
 
 zenityThemeResult=$(
   zenity --list --title="Choose Packages to Install" --width="1000" --height="400" \
-         --column="Select" --column="Package Name" --column="Description" \
-         " " "default-theme" "The default theme uses arc-theme and has very nice matte icons." \
-         " " "macOS-dark-imitation" "This attempts to emulate the look and feel of macOSX mojave dark." \
+         --column="Package Name" --column="Description" \
+         "default-theme" "The default theme uses arc-theme and has very nice matte icons." \
+         "macOS-dark-imitation" "This attempts to emulate the look and feel of macOSX mojave dark." \
 )
 
 zenity --question --text="Are you sure you wish to install these packages: $zenityPackageResult $zenityThemeResult"
