@@ -116,4 +116,5 @@ if [[ $zenityThemeResult == *"macOS-dark"* ]]; then
   gsettings set org.gnome.shell.extensions.dash-to-dock transparency-mode DEFAULT
   gsettings set org.gnome.shell.extensions.dash-to-dock extend-height false
   gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
+  gsettings set org.gnome.desktop.wm.preferences button-layout 'close,maximize,minimize:'
 fi
