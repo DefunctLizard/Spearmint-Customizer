@@ -104,4 +104,11 @@ if [[ $zenityThemeResult == *"macOS-dark-imitation"* ]]; then
  cd /$HOME/spearmint-customizer/spearmint-themes/backgrounds/
  sudo cp mojave-night.jpg /usr/share/backgrounds
  gsettings set org.gnome.desktop.background picture-uri file:///usr/share/backgrounds/mojave-night.jpg
+ gsettings set org.gnome.shell.extensions.dash-to-dock show-apps-at-top true
+ gsettings set org.gnome.shell.extensions.dash-to-dock running-indicator-style DEFAULT
+ gsettings set org.gnome.shell.extensions.dash-to-dock custom-theme-customize-running-dots false
+ gsettings set org.gnome.shell.extensions.dash-to-dock custom-theme-shrink false
+ gsettings set org.gnome.shell.extensions.dash-to-dock transparency-mode DEFAULT
+ gsettings set org.gnome.shell.extensions.dash-to-dock extend-height false
+ gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
 fi
