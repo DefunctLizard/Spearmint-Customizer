@@ -123,7 +123,7 @@ fi
 if [[ $zenityThemeResult == *"macOS-light"* ]]; then
   sudo apt-get update
   git clone https://github.com/DefunctLizard/macOS-light-GNOME.git
-  cd /$HOME/spearmint-customizer/macOS-light-
+  cd /$HOME/spearmint-customizer/macOS-light-GNOME/
   mkdir OSX_ONE
   sudo tar -xf OSX_ONE9.2.tar.xz --directory /$HOME/spearmint-customizer/macOS-light-GNOME/OSX_ONE
   cd /$HOME/spearmint-customizer/macOS-light-GNOME/OSX_ONE
