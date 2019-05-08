@@ -29,6 +29,18 @@ zenityPackageResult=$(
          " " "inkscape" "Inkscape is a free and open-source vector graphics editor." \
 )
 
+if [ "$zenityPackageResult" == " " ]; then
+  " "
+else
+  zenity --question --text="Are you sure you wish to install these packages: $zenityPackageResult"
+  confirmCode=$?
+
+  if [ "$confirmCode" -ne 0 ]; then
+    echo "Cancelled, Thank you."
+    exit 1
+  fi
+fi
+
 # Wildcards (*) around the result will find matches.
 if [[ $zenityPackageResult == *"gimp"* ]]; then
   sudo apt-get install gimp -yy
@@ -68,12 +80,16 @@ zenityThemeResult=$(
          "qogir-win" "qogir is a blue theme with windows 10 like borders." \
 )
 
-zenity --question --text="Are you sure you wish to install these packages: $zenityPackageResult $zenityThemeResult"
-confirmCode=$?
+if [[ "$zenityThemeResult" == " "]]; then
+  " "
+else
+  zenity --question --text="Are you sure you wish to install these packages: $zenityPackageResult $zenityThemeResult"
+  confirmCode=$?
 
-if [ "$confirmCode" -ne 0 ]; then
-  echo "Cancelled. Thank you."
-  exit 1
+  if [ "$confirmCode" -ne 0 ]; then
+    echo "Cancelled, Thank you."
+    exit 1
+  fi
 fi
 
 if [[ $zenityThemeResult == "spearmint-default" ]]; then
