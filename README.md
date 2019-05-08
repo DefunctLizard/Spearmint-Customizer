@@ -11,11 +11,13 @@ Some themes may not work with older or newer versions
 
 ## Getting Started
 Spearmint customizer is easy to install, just clone and run setup.sh!
+
 ### Prerequisites
 Git is needed to install.
+
 To install git paste the following line into the terminal
 ```
-sudo apt-get install git
+sudo apt install git
 ```
 ### Installing
 First, clone the repository.
