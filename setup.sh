@@ -76,7 +76,7 @@ if [ "$confirmCode" -ne 0 ]; then
   exit 1
 fi
 
-if [[ $zenityThemeResult == *"default-theme"* ]]; then
+if [[ $zenityThemeResult == "default-theme" ]]; then
   sudo apt-get update
   sudo git clone https://github.com/DefunctLizard/spearmint-default-GNOME.git
   sudo apt install arc-theme -yy
@@ -96,7 +96,7 @@ if [[ $zenityThemeResult == *"default-theme"* ]]; then
   gsettings set org.gnome.desktop.interface icon-theme "Flat-Remix-Blue"
 fi
 
-if [[ $zenityThemeResult == *"macOS-dark"* ]]; then
+if [[ $zenityThemeResult == "macOS-dark" ]]; then
   sudo apt-get update
   git clone https://github.com/DefunctLizard/macOS-GNOME.git
   cd /$HOME/spearmint-customizer/macOS-GNOME
@@ -121,7 +121,7 @@ if [[ $zenityThemeResult == *"macOS-dark"* ]]; then
   gsettings set org.gnome.desktop.wm.preferences button-layout 'close,maximize,minimize:'
 fi
 
-if [[ $zenityThemeResult == *"macOS-light"* ]]; then
+if [[ $zenityThemeResult == "macOS-light" ]]; then
   sudo apt-get update
   git clone https://github.com/DefunctLizard/macOS-light-GNOME.git
   cd /$HOME/spearmint-customizer/macOS-light-GNOME/
@@ -146,7 +146,7 @@ if [[ $zenityThemeResult == *"macOS-light"* ]]; then
   gsettings set org.gnome.desktop.wm.preferences button-layout 'close,maximize,minimize:'
 fi
 
-if [[ $zenityThemeResult == *"qogir-win"* ]]; then
+if [[ $zenityThemeResult == "qogir-win" ]]; then
   sudo apt-get update
   sudo git clone https://github.com/DefunctLizard/qogir-GNOME.git
   cd /$HOME/spearmint-customizer/qogir-GNOME/
