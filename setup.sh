@@ -152,7 +152,7 @@ if [[ $zenityThemeResult == *"bubble-darker"* ]]; then
   cd /$HOME/spearmint-customizer/bubble-darker-GNOME/
   sudo tar -xf Bubble-Darker-Blue.tar.xz
   sudo cp -r Bubble-Darker-Blue /usr/share/themes
-  gsettings set org.gnome.desktop.interface gtk-theme "bubble-darker"
+  gsettings set org.gnome.desktop.interface gtk-theme "Bubble-Darker-Blue"
   gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
   cd /$HOME/spearmint-customizer/bubble-darker-GNOME/
   sudo cp lake_mountains_reflection_sky_116757_3840x2160.jpg /usr/share/backgrounds
