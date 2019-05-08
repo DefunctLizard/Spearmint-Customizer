@@ -65,7 +65,7 @@ zenityThemeResult=$(
          "default-theme" "The default theme uses arc-theme and has matte icons." \
          "macOS-dark" "This attempts to emulate the look and feel of macOSX mojave dark." \
          "macOS-light" "This attempts to emulate the look and feel of macOSX mojave light." \
-         "qogir-win" "qogir is a great looking blue theme." \
+         "qogir-win" "qogir is a blue theme with windows 10 like borders." \
 )
 
 zenity --question --text="Are you sure you wish to install these packages: $zenityPackageResult $zenityThemeResult"
