@@ -1,15 +1,9 @@
 # Spearmint-Customizer
-Spearmint Customizer is a script that installs all the things you were going to do anyway.
+Spearmint customizer installs the custom themes and programs you were just going to do anyway.
 
-Spearmint customizer turns the default desktop...
+[List of Themes](https://github.com/DefunctLizard/spearmint-customizer/wiki/List-of-custom-themes)
 
-Clean Install:
-![stock](https://i.imgur.com/2Vig7QB.png)
-
-into this!
-
-Spearmint Customizer:
-![spearmint](https://i.imgur.com/jhSdOY9.png)
+[List of Packages](https://github.com/DefunctLizard/spearmint-customizer/wiki/List-of-Packages)
 
 **SPEARMINT CUSTOMIZER HAS ONLY BEEN TESTED WITH UBUNTU 19.04 CURRENTLY**
 
