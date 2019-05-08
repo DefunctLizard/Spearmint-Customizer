@@ -85,6 +85,7 @@ if [[ $zenityThemeResult == "spearmint-default" ]]; then
   gsettings set org.gnome.shell.extensions.dash-to-dock transparency-mode DEFAULT
   gsettings set org.gnome.shell.extensions.dash-to-dock extend-height false
   gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
+  gsettings set org.gnome.desktop.wm.preferences button-layout ':close,maximize,minimize'
   cd /$HOME/spearmint-customizer/spearmint-default-GNOME/
   sudo cp mountains_lake_tops_129263_3840x2160.jpg /usr/share/backgrounds
   gsettings set org.gnome.desktop.background picture-uri file:///usr/share/backgrounds/mountains_lake_tops_129263_3840x2160.jpg
@@ -151,6 +152,7 @@ if [[ $zenityThemeResult == "qogir-win" ]]; then
   sudo cp -r Qogir-win /usr/share/themes
   gsettings set org.gnome.desktop.interface gtk-theme "Qogir-win"
   dconf reset -f /org/gnome/shell/extensions/dash-to-dock/
+  gsettings set org.gnome.desktop.wm.preferences button-layout ':close,maximize,minimize'
   gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
   cd /$HOME/spearmint-customizer/qogir-GNOME/
   sudo cp lake_mountains_reflection_sky_116757_3840x2160.jpg /usr/share/backgrounds
