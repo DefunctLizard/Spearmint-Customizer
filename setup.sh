@@ -65,7 +65,7 @@ zenityThemeResult=$(
          "default-theme" "The default theme uses arc-theme and has matte icons." \
          "macOS-dark" "This attempts to emulate the look and feel of macOSX mojave dark." \
          "macOS-light" "This attempts to emulate the look and feel of macOSX mojave light." \
-         "bubble-darker" "Bubble darker is a great looking blue theme." \
+         "qogir-win" "qogir is a great looking blue theme." \
 )
 
 zenity --question --text="Are you sure you wish to install these packages: $zenityPackageResult $zenityThemeResult"
@@ -146,15 +146,15 @@ if [[ $zenityThemeResult == *"macOS-light"* ]]; then
   gsettings set org.gnome.desktop.wm.preferences button-layout 'close,maximize,minimize:'
 fi
 
-if [[ $zenityThemeResult == *"bubble-darker"* ]]; then
+if [[ $zenityThemeResult == *"qogir-win"* ]]; then
   sudo apt-get update
-  sudo git clone https://github.com/DefunctLizard/bubble-darker-GNOME.git
-  cd /$HOME/spearmint-customizer/bubble-darker-GNOME/
-  sudo tar -xf Bubble-Darker-Blue.tar.xz
-  sudo cp -r Bubble-Darker-Blue /usr/share/themes
-  gsettings set org.gnome.desktop.interface gtk-theme "Bubble-Darker-Blue"
+  sudo git clone https://github.com/DefunctLizard/qogir-GNOME.git
+  cd /$HOME/spearmint-customizer/qogir-GNOME/
+  sudo tar -xf Qogir-win.tar.xz
+  sudo cp -r Qogir-win /usr/share/themes
+  gsettings set org.gnome.desktop.interface gtk-theme "Qogir-win"
   gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
-  cd /$HOME/spearmint-customizer/bubble-darker-GNOME/
+  cd /$HOME/spearmint-customizer/qogir-GNOME/
   sudo cp lake_mountains_reflection_sky_116757_3840x2160.jpg /usr/share/backgrounds
   gsettings set org.gnome.desktop.background picture-uri file:///usr/share/backgrounds/lake_mountains_reflection_sky_116757_3840x2160.jpg
   sudo tar -xf Qogir.tar.xz
