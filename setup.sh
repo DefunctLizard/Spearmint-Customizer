@@ -62,7 +62,7 @@ fi
 zenityThemeResult=$(
   zenity --list --title="Choose Packages to Install" --width="1000" --height="400" \
          --column="Package Name" --column="Description" \
-         "default-theme" "The default theme uses arc-theme and has matte icons." \
+         "spearmint-default" "The default theme uses arc-theme and has matte icons." \
          "macOS-dark" "This attempts to emulate the look and feel of macOSX mojave dark." \
          "macOS-light" "This attempts to emulate the look and feel of macOSX mojave light." \
          "qogir-win" "qogir is a blue theme with windows 10 like borders." \
@@ -78,7 +78,7 @@ fi
 
 if [[ $zenityThemeResult == *"default-theme"* ]]; then
   sudo apt-get update
-  sudo git clone https://github.com/DefunctLizard/spearmint-default-theme.git
+  sudo git clone https://github.com/DefunctLizard/spearmint-default-GNOME.git
   sudo apt install arc-theme -yy
   gsettings set org.gnome.desktop.interface gtk-theme "Arc-Darker"
   gsettings set org.gnome.shell.extensions.dash-to-dock show-apps-at-top true
@@ -88,7 +88,7 @@ if [[ $zenityThemeResult == *"default-theme"* ]]; then
   gsettings set org.gnome.shell.extensions.dash-to-dock transparency-mode DEFAULT
   gsettings set org.gnome.shell.extensions.dash-to-dock extend-height false
   gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
-  cd /$HOME/spearmint-customizer/spearmint-default-theme/
+  cd /$HOME/spearmint-customizer/spearmint-default-GNOME/
   sudo cp mountains_lake_tops_129263_3840x2160.jpg /usr/share/backgrounds
   gsettings set org.gnome.desktop.background picture-uri file:///usr/share/backgrounds/mountains_lake_tops_129263_3840x2160.jpg
   sudo tar -xf Flat-Remix-Blue_1.90.tar.xz
