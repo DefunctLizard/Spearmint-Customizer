@@ -27,6 +27,7 @@ zenityPackageResult=$(
          " " "vlc-media-player" "VLC media player is a free and open-source, portable, cross-platform media player and streaming media server." \
          " " "vim-editor" "VIM is a free and open-source command-line text editor" \
          " " "inkscape" "Inkscape is a free and open-source vector graphics editor." \
+         " " "chromium" "Chromium is Google's open-source web browser project." \
 )
 
 # Wildcards (*) around the result will find matches.
@@ -57,6 +58,10 @@ fi
 
 if [[ $zenityPackageResult == *"inkscape"* ]]; then
   sudo apt-get install inkscape -yy
+fi
+
+if [[ $zenityPackageResult == *"chromium"* ]]; then
+  sudo apt install -y chromium-browser -yy
 fi
 
 zenityThemeResult=$(
