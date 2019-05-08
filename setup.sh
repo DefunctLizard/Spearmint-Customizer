@@ -149,8 +149,9 @@ fi
 if [[ $zenityThemeResult == *"bubble-darker"* ]]; then
   sudo apt-get update
   sudo git clone https://github.com/DefunctLizard/bubble-darker-GNOME.git
+  cd /$HOME/spearmint-customizer/bubble-darker-GNOME/
   sudo tar -xf Bubble-Darker-Blue.tar.xz
-  sudo cp -r Flat-Remix-Blue /usr/share/themes
+  sudo cp -r Bubble-Darker-Blue /usr/share/themes
   gsettings set org.gnome.desktop.interface gtk-theme "bubble-darker"
   gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
   cd /$HOME/spearmint-customizer/bubble-darker-GNOME/
