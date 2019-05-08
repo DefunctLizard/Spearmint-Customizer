@@ -76,7 +76,7 @@ if [ "$confirmCode" -ne 0 ]; then
   exit 1
 fi
 
-if [[ $zenityThemeResult == "default-theme" ]]; then
+if [[ $zenityThemeResult == "spearmint-default" ]]; then
   sudo apt-get update
   sudo git clone https://github.com/DefunctLizard/spearmint-default-GNOME.git
   sudo apt install arc-theme -yy
