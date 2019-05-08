@@ -150,6 +150,7 @@ if [[ $zenityThemeResult == "qogir-win" ]]; then
   sudo tar -xf Qogir-win.tar.xz
   sudo cp -r Qogir-win /usr/share/themes
   gsettings set org.gnome.desktop.interface gtk-theme "Qogir-win"
+  dconf reset -f /org/gnome/shell/extensions/dash-to-dock/
   gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
   cd /$HOME/spearmint-customizer/qogir-GNOME/
   sudo cp lake_mountains_reflection_sky_116757_3840x2160.jpg /usr/share/backgrounds
