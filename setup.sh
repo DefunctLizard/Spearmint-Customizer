@@ -62,9 +62,10 @@ fi
 zenityThemeResult=$(
   zenity --list --title="Choose Packages to Install" --width="1000" --height="400" \
          --column="Package Name" --column="Description" \
-         "default-theme" "The default theme uses arc-theme and has very nice matte icons." \
+         "default-theme" "The default theme uses arc-theme and has matte icons." \
          "macOS-dark" "This attempts to emulate the look and feel of macOSX mojave dark." \
          "macOS-light" "This attempts to emulate the look and feel of macOSX mojave light." \
+         "bubble-darker" "Bubble darker is a great looking blue theme." \
 )
 
 zenity --question --text="Are you sure you wish to install these packages: $zenityPackageResult $zenityThemeResult"
@@ -143,4 +144,19 @@ if [[ $zenityThemeResult == *"macOS-light"* ]]; then
   gsettings set org.gnome.shell.extensions.dash-to-dock extend-height false
   gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
   gsettings set org.gnome.desktop.wm.preferences button-layout 'close,maximize,minimize:'
+fi
+
+if [[ $zenityThemeResult == *"bubble-darker"* ]]; then
+  sudo apt-get update
+  sudo git clone https://github.com/DefunctLizard/bubble-darker-GNOME.git
+  sudo tar -xf Bubble-Darker-Blue.tar.xz
+  sudo cp -r Flat-Remix-Blue /usr/share/themes
+  gsettings set org.gnome.desktop.interface gtk-theme "bubble-darker"
+  gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
+  cd /$HOME/spearmint-customizer/bubble-darker-GNOME/
+  sudo cp lake_mountains_reflection_sky_116757_3840x2160.jpg /usr/share/backgrounds
+  gsettings set org.gnome.desktop.background picture-uri file:///usr/share/backgrounds/lake_mountains_reflection_sky_116757_3840x2160.jpg
+  sudo tar -xf Qogir.tar.xz
+  sudo cp -r Qogir /usr/share/icons
+  gsettings set org.gnome.desktop.interface icon-theme "Qogir"
 fi
