@@ -177,4 +177,5 @@ if [[ $zenityThemeResult == "materia" ]]; then
   gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
   gsettings set org.gnome.shell.extensions.dash-to-dock show-apps-at-top true
   sudo cp mountains_lake_clouds_117489_3840x2160.jpg /usr/share/backgrounds
-  gsettings set org.gnome.desktop.background picture-uri file:///usr/share/backgrounds/mountains_lake_clouds_117489_3840x2160.jpg	
+  gsettings set org.gnome.desktop.background picture-uri file:///usr/share/backgrounds/mountains_lake_clouds_117489_3840x2160.jpg
+fi
