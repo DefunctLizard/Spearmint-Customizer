@@ -11,6 +11,7 @@
 
 # update packages and install essentials
 sudo apt-get update -yy
+sudo apt update -yy
 sudo apt-get install xz-utils -yy
 sudo apt-get install zenity -yy
 sudo apt-get install gnome-tweaks -yy
@@ -173,7 +174,7 @@ if [[ $zenityThemeResult == "materia" ]]; then
   sudo cp -r Tela-blue /usr/share/icons
   gsettings set org.gnome.desktop.interface icon-theme "Tela-blue"
   dconf reset -f /org/gnome/shell/extensions/dash-to-dock/
-  gsettings set org.gnome.desktop.wm.preferences button-layout ':close,maximize,minimize'
+  gsettings set org.gnome.desktop.wm.preferences button-layout ':minimize,maximize,close'
   gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
   gsettings set org.gnome.shell.extensions.dash-to-dock show-apps-at-top true
   sudo cp mountains_lake_clouds_117489_3840x2160.jpg /usr/share/backgrounds
