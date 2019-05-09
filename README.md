@@ -20,6 +20,8 @@ To install git paste the following line into the terminal
 sudo apt install git
 ```
 ### Installing
+Copy and paste the following lines of code into the terminal:
+
 First, clone the repository.
 ```
 git clone https://github.com/DefunctLizard/spearmint-customizer/
