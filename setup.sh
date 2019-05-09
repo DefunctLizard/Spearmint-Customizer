@@ -162,3 +162,19 @@ if [[ $zenityThemeResult == "qogir-win" ]]; then
   sudo cp -r Qogir /usr/share/icons
   gsettings set org.gnome.desktop.interface icon-theme "Qogir"
 fi
+
+if [[ $zenityThemeResult == "materia" ]]; then
+  sudo apt-get update
+  sudo apt-get install materia
+  gsettings set org.gnome.desktop.interface gtk-theme "Materia"
+  git clone https://github.com/DefunctLizard/materia-GNOME.git
+  cd /$HOME/spearmint-customizer/materia-GNOME/
+  sudo tar -xf Tela-blue.tar.xz
+  sudo cp -r Tela-blue /usr/share/themes
+  gsettings set org.gnome.desktop.interface icon-theme "Tela-blue"
+  dconf reset -f /org/gnome/shell/extensions/dash-to-dock/
+  gsettings set org.gnome.desktop.wm.preferences button-layout ':close,maximize,minimize'
+  gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
+  gsettings set org.gnome.shell.extensions.dash-to-dock show-apps-at-top true
+  sudo cp mountains_lake_clouds_117489_3840x2160.jpg /usr/share/backgrounds
+  gsettings set org.gnome.desktop.background picture-uri file:///usr/share/backgrounds/mountains_lake_clouds_117489_3840x2160.jpg	
