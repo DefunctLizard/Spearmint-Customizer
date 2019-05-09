@@ -166,7 +166,7 @@ fi
 
 if [[ $zenityThemeResult == "materia" ]]; then
   sudo apt-get update
-  sudo apt-get install materia-gtk-theme
+  sudo apt-get install materia-gtk-theme -yy
   gsettings set org.gnome.desktop.interface gtk-theme "Materia"
   git clone https://github.com/DefunctLizard/materia-GNOME.git
   cd /$HOME/spearmint-customizer/materia-GNOME/
