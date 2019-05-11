@@ -67,9 +67,7 @@ if [[ $zenityPackageResult == *"chromium"* ]]; then
 fi
 
 if [[ $zenityPackageResult == *"atom"* ]]; then
-  sudo add-apt-repository ppa:webupd8team/atom
-  sudo apt-get update
-  sudo apt-get install atom
+  sudo snap install atom --classic
 fi
 
 zenityThemeResult=$(
