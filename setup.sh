@@ -198,3 +198,4 @@ if [[ $zenityThemeResult == "vimix" ]]; then
   gsettings set org.gnome.desktop.wm.preferences button-layout ':minimize,maximize,close'
   gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
   gsettings set org.gnome.shell.extensions.dash-to-dock show-apps-at-top true
+fi
