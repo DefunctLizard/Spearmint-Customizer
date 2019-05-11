@@ -205,4 +205,5 @@ if [[ $zenityThemeResult == "vimix" ]]; then
   gsettings set org.gnome.desktop.wm.preferences button-layout ':minimize,maximize,close'
   gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
   gsettings set org.gnome.shell.extensions.dash-to-dock show-apps-at-top true
+  sudo sed -i 's/background-color: #2C001E;/background-color: #232323;/g' /etc/alternatives/gdm3.css
 fi
