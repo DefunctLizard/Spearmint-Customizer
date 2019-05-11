@@ -73,6 +73,7 @@ zenityThemeResult=$(
          "macOS-light" "This attempts to emulate the look and feel of macOSX mojave light." \
          "qogir-win" "qogir is a blue theme with windows 10 like borders." \
          "materia" "The materia theme is a great material theme that incorporates the tela icon theme. "
+         "vimix" "Vimix is a macOS like theme with the dual icon theme."
 )
 
 if [[ $zenityThemeResult == "spearmint-default" ]]; then
@@ -180,3 +181,20 @@ if [[ $zenityThemeResult == "materia" ]]; then
   sudo cp mountains_lake_clouds_117489_3840x2160.jpg /usr/share/backgrounds
   gsettings set org.gnome.desktop.background picture-uri file:///usr/share/backgrounds/mountains_lake_clouds_117489_3840x2160.jpg
 fi
+
+if [[ $zenityThemeResult == "vimix" ]]; then
+  sudo apt-get update
+  git clone https://github.com/DefunctLizard/Vimix-GNOME.git
+  cd /$HOME/spearmint-customizer/Vimix-GNOME/
+  sudo tar -xf vimix-color.tar.xz
+  sudo cp -r vimix-color /usr/share/icons
+  gsettings set org.gnome.desktop.interface gtk-theme "Vimix"
+  sudo tar -xf dual-1.3.tar.xz
+  sudo cp -r dual-1.3 /usr/share/icons
+  gsettings set org.gnome.desktop.interface icon-theme "Dual"
+  sudo cp mountain_peak_fog_132758_3840x2160.jpg /usr/share/backgrounds
+  gsettings set org.gnome.desktop.background picture-uri file:///usr/share/backgrounds/mountain_peak_fog_132758_3840x2160.jpg
+  dconf reset -f /org/gnome/shell/extensions/dash-to-dock/
+  gsettings set org.gnome.desktop.wm.preferences button-layout ':minimize,maximize,close'
+  gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
+  gsettings set org.gnome.shell.extensions.dash-to-dock show-apps-at-top true
