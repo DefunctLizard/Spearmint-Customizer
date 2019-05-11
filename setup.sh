@@ -71,7 +71,7 @@ if [[ $zenityPackageResult == *"atom"* ]]; then
 fi
 
 zenityThemeResult=$(
-  zenity --list --title="Choose Packages to Install" --width="1000" --height="400" \
+  zenity --list --title="Choose Themes to Install" --width="1000" --height="400" \
          --column="Package Name" --column="Description" \
          "spearmint-default" "The default theme uses arc-theme and has matte icons." \
          "macOS-dark" "This attempts to emulate the look and feel of macOSX mojave dark." \
