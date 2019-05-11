@@ -72,8 +72,8 @@ zenityThemeResult=$(
          "macOS-dark" "This attempts to emulate the look and feel of macOSX mojave dark." \
          "macOS-light" "This attempts to emulate the look and feel of macOSX mojave light." \
          "qogir-win" "qogir is a blue theme with windows 10 like borders." \
-         "materia" "The materia theme is a great material theme that incorporates the tela icon theme. "
-         "vimix" "Vimix is a macOS like theme with the dual icon theme."
+         "materia" "The materia theme is a great material theme that incorporates the tela icon theme. " \
+         "vimix" "Vimix is a macOS like theme with the dual icon theme." \
 )
 
 if [[ $zenityThemeResult == "spearmint-default" ]]; then
