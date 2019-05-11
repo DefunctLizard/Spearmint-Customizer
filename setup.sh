@@ -29,6 +29,7 @@ zenityPackageResult=$(
          " " "vim-editor" "VIM is a free and open-source command-line text editor" \
          " " "inkscape" "Inkscape is a free and open-source vector graphics editor." \
          " " "chromium" "Chromium is Google's open-source web browser project." \
+         " " "atom" "Atom is a text editor developed by GitHub." \
 )
 
 # Wildcards (*) around the result will find matches.
@@ -63,6 +64,12 @@ fi
 
 if [[ $zenityPackageResult == *"chromium"* ]]; then
   sudo apt install -y chromium-browser -yy
+fi
+
+if [[ $zenityPackageResult == *"atom"* ]]; then
+  sudo add-apt-repository ppa:webupd8team/atom
+  sudo apt-get update
+  sudo apt-get install atom
 fi
 
 zenityThemeResult=$(
