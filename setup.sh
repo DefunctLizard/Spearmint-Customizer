@@ -185,11 +185,10 @@ fi
 if [[ $zenityThemeResult == "vimix" ]]; then
   sudo apt-get update
   git clone https://github.com/DefunctLizard/Vimix-GNOME.git
-  cd /$HOME/spearmint-customizer/Vimix-GNOME/vimix-color/
+  cd /$HOME/spearmint-customizer/Vimix-GNOME/
   sudo tar -xf vimix-color.tar.xz
-  sudo cp -r vimix /usr/share/icons
+  sudo cp -r vimix-color /usr/share/icons
   gsettings set org.gnome.desktop.interface gtk-theme "Vimix"
-  cd /$HOME/spearmint-customizer/
   sudo tar -xf zafiro-icons-Classic-20190428004537.tar.xz
   sudo cp -r zafiro-icons-Classic /usr/share/icons
   gsettings set org.gnome.desktop.interface icon-theme "zafiro-icons-Classic"
