@@ -189,11 +189,11 @@ if [[ $zenityThemeResult == "vimix" ]]; then
   sudo tar -xf vimix-color.tar.xz
   cd /$HOME/spearmint-customizer/Vimix-GNOME/vimix-color/
   sudo cp -r vimix /usr/share/themes
-  gsettings set org.gnome.desktop.interface gtk-theme "Vimix"
   cd /$HOME/spearmint-customizer/Vimix-GNOME/
   sudo tar -xf zafiro-icons-Classic-20190428004537.tar.xz
   sudo cp -r zafiro-icons-Classic /usr/share/icons
   gsettings set org.gnome.desktop.interface icon-theme "zafiro-icons-Classic"
+  gsettings set org.gnome.desktop.interface gtk-theme "vimix"
   sudo cp mountain_peak_fog_132758_3840x2160.jpg /usr/share/backgrounds
   gsettings set org.gnome.desktop.background picture-uri file:///usr/share/backgrounds/mountain_peak_fog_132758_3840x2160.jpg
   dconf reset -f /org/gnome/shell/extensions/dash-to-dock/
