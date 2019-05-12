@@ -1,3 +1,3 @@
 #!/bin/bash
 
-echo "starting ubuntu 19.04 setup"
+echo "starting Ubuntu 19.04 setup"
