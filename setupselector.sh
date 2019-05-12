@@ -15,3 +15,6 @@ if [[ $DISTRIBUTION == *"Debian GNU/Linux 9 (stretch)"* ]]; then
   chmod +x setup.sh
   ./setup.sh
 fi
+
+if [[ $DISTRIBUTION == "unknown"]]; then
+  echo "could not detect distribution"
