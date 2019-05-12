@@ -3,4 +3,8 @@
 DISTRIBUTION=unknown
 
 DISTRIBUTION=$( cat /etc/os-release )
-echo "this is your distribution: $DISTRIBUTION"
+
+if [[ $DISTRIBUTION == *"PRETTY_NAME="Ubuntu 19.04"* ]]; then
+  cd /$HOME/spearmint-customizer/Ubuntu/19.04/
+  chmod +x setup.sh
+  ./setup.sh
