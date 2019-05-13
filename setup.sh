@@ -29,7 +29,6 @@ zenityPackageResult=$(
          " " "vim-editor" "VIM is a free and open-source command-line text editor" \
          " " "inkscape" "Inkscape is a free and open-source vector graphics editor." \
          " " "chromium" "Chromium is Google's open-source web browser project." \
-         " " "atom" "Atom is a text editor developed by GitHub." \
 )
 
 # Wildcards (*) around the result will find matches.
@@ -66,12 +65,8 @@ if [[ $zenityPackageResult == *"chromium"* ]]; then
   sudo apt install -y chromium-browser -yy
 fi
 
-if [[ $zenityPackageResult == *"atom"* ]]; then
-  sudo snap install atom --classic
-fi
-
 zenityThemeResult=$(
-  zenity --list --title="Choose Themes to Install" --width="1000" --height="400" \
+  zenity --list --title="Choose Packages to Install" --width="1000" --height="400" \
          --column="Package Name" --column="Description" \
          "spearmint-default" "The default theme uses arc-theme and has matte icons." \
          "macOS-dark" "This attempts to emulate the look and feel of macOSX mojave dark." \
@@ -205,5 +200,4 @@ if [[ $zenityThemeResult == "vimix" ]]; then
   gsettings set org.gnome.desktop.wm.preferences button-layout ':minimize,maximize,close'
   gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
   gsettings set org.gnome.shell.extensions.dash-to-dock show-apps-at-top true
-  sudo sed -i 's/background-color: #2C001E;/background-color: #232323;/g' /etc/alternatives/gdm3.css
 fi

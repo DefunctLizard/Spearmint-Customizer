@@ -5,8 +5,6 @@ Spearmint customizer installs the custom themes and programs you were just going
 
 [List of Packages](https://github.com/DefunctLizard/spearmint-customizer/wiki/List-of-Packages)
 
-[List of Supported Distributions](https://github.com/DefunctLizard/spearmint-customizer/wiki/List-of-supported-distributions)
-
 **SPEARMINT CUSTOMIZER HAS ONLY BEEN TESTED WITH UBUNTU 19.04 CURRENTLY**
 
 Some themes may not work with older or newer versions
