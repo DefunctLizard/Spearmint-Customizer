@@ -16,5 +16,11 @@ if [[ $DISTRIBUTION == *"Debian GNU/Linux 9 (stretch)"* ]]; then
   ./setup.sh
 fi
 
+if [[ $DISTRIBUTION == *"Ubuntu 18.04.2"* ]]; then
+  cd /$HOME/spearmint-customizer/Ubuntu/18.04.2/
+  chmod +x setup.sh
+  ./setup.sh
+fi
+
 if [[ $DISTRIBUTION == "unknown"]]; then
   echo "could not detect distribution"
