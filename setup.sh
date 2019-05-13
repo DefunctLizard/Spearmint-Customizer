@@ -95,18 +95,19 @@ if [[ $zenityThemeResult == "spearmint-default" ]]; then
   sudo tar -xf Flat-Remix-Blue_1.90.tar.xz
   sudo cp -r Flat-Remix-Blue /usr/share/icons
   gsettings set org.gnome.desktop.interface icon-theme "Flat-Remix-Blue"
+  gsettings set org.gnome.shell.extensions.dash-to-dock transparency-mode 'FIXED'
 fi
 
 if [[ $zenityThemeResult == "macOS-dark" ]]; then
   sudo apt-get update
   git clone https://github.com/DefunctLizard/macOS-GNOME.git
-  cd /$HOME/spearmint-customizer/macOS-GNOME
+  cd /$HOME/spearmint-customizer/Ubuntu/macOS-GNOME
   mkdir OSX_ONE
-  sudo tar -xf OSX_ONE9.2.tar.xz --directory /$HOME/spearmint-customizer/macOS-GNOME/OSX_ONE
-  cd /$HOME/spearmint-customizer/macOS-GNOME/OSX_ONE
+  sudo tar -xf OSX_ONE9.2.tar.xz --directory /$HOME/spearmint-customizer/Ubuntu/macOS-GNOME/OSX_ONE
+  cd /$HOME/spearmint-customizer/Ubuntu/macOS-GNOME/OSX_ONE
   sudo cp -r OSX_ONE /usr/share/icons
   gsettings set org.gnome.desktop.interface icon-theme "OSX_ONE"
-  cd /$HOME/spearmint-customizer/macOS-GNOME/
+  cd /$HOME/spearmint-customizer/Ubuntu/macOS-GNOME/
   sudo cp mojave-night.jpg /usr/share/backgrounds
   sudo tar -xf Mojave-dark.tar.xz
   sudo cp -r Mojave-dark /usr/share/themes/
@@ -120,18 +121,19 @@ if [[ $zenityThemeResult == "macOS-dark" ]]; then
   gsettings set org.gnome.shell.extensions.dash-to-dock extend-height false
   gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
   gsettings set org.gnome.desktop.wm.preferences button-layout 'close,maximize,minimize:'
+  gsettings set org.gnome.shell.extensions.dash-to-dock transparency-mode 'FIXED'
 fi
 
 if [[ $zenityThemeResult == "macOS-light" ]]; then
   sudo apt-get update
   git clone https://github.com/DefunctLizard/macOS-light-GNOME.git
-  cd /$HOME/spearmint-customizer/macOS-light-GNOME/
+  cd /$HOME/spearmint-customizer/Ubuntu/macOS-light-GNOME/
   mkdir OSX_ONE
-  sudo tar -xf OSX_ONE9.2.tar.xz --directory /$HOME/spearmint-customizer/macOS-light-GNOME/OSX_ONE
-  cd /$HOME/spearmint-customizer/macOS-light-GNOME/OSX_ONE
+  sudo tar -xf OSX_ONE9.2.tar.xz --directory /$HOME/spearmint-customizer/Ubuntu/macOS-light-GNOME/OSX_ONE
+  cd /$HOME/spearmint-customizer/Ubuntu/macOS-light-GNOME/OSX_ONE
   sudo cp -r OSX_ONE /usr/share/icons
   gsettings set org.gnome.desktop.interface icon-theme "OSX_ONE"
-  cd /$HOME/spearmint-customizer/macOS-light-GNOME/
+  cd /$HOME/spearmint-customizer/Ubuntu/macOS-light-GNOME/
   sudo cp mojave-day.jpg /usr/share/backgrounds
   sudo tar -xf Mojave-light.tar.xz
   sudo cp -r Mojave-light /usr/share/themes/
@@ -145,19 +147,21 @@ if [[ $zenityThemeResult == "macOS-light" ]]; then
   gsettings set org.gnome.shell.extensions.dash-to-dock extend-height false
   gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
   gsettings set org.gnome.desktop.wm.preferences button-layout 'close,maximize,minimize:'
+  gsettings set org.gnome.shell.extensions.dash-to-dock transparency-mode 'FIXED'
 fi
 
 if [[ $zenityThemeResult == "qogir-win" ]]; then
   sudo apt-get update
   sudo git clone https://github.com/DefunctLizard/qogir-GNOME.git
-  cd /$HOME/spearmint-customizer/qogir-GNOME/
+  cd /$HOME/spearmint-customizer/Ubuntu/qogir-GNOME/
   sudo tar -xf Qogir-win.tar.xz
   sudo cp -r Qogir-win /usr/share/themes
   gsettings set org.gnome.desktop.interface gtk-theme "Qogir-win"
   dconf reset -f /org/gnome/shell/extensions/dash-to-dock/
   gsettings set org.gnome.desktop.wm.preferences button-layout ':minimize,maximize,close'
   gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
-  cd /$HOME/spearmint-customizer/qogir-GNOME/
+  gsettings set org.gnome.shell.extensions.dash-to-dock transparency-mode 'FIXED'
+  cd /$HOME/spearmint-customizer/Ubuntu/qogir-GNOME/
   sudo cp lake_mountains_reflection_sky_116757_3840x2160.jpg /usr/share/backgrounds
   gsettings set org.gnome.desktop.background picture-uri file:///usr/share/backgrounds/lake_mountains_reflection_sky_116757_3840x2160.jpg
   sudo tar -xf Qogir.tar.xz
@@ -170,7 +174,7 @@ if [[ $zenityThemeResult == "materia" ]]; then
   sudo apt-get install materia-gtk-theme -yy
   gsettings set org.gnome.desktop.interface gtk-theme "Materia"
   git clone https://github.com/DefunctLizard/materia-GNOME.git
-  cd /$HOME/spearmint-customizer/materia-GNOME/
+  cd /$HOME/spearmint-customizer/Ubuntu/materia-GNOME/
   sudo tar -xf Tela-blue.tar.xz
   sudo cp -r Tela-blue /usr/share/icons
   gsettings set org.gnome.desktop.interface icon-theme "Tela-blue"
@@ -178,6 +182,7 @@ if [[ $zenityThemeResult == "materia" ]]; then
   gsettings set org.gnome.desktop.wm.preferences button-layout ':minimize,maximize,close'
   gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
   gsettings set org.gnome.shell.extensions.dash-to-dock show-apps-at-top true
+  gsettings set org.gnome.shell.extensions.dash-to-dock transparency-mode 'FIXED'
   sudo cp mountains_lake_clouds_117489_3840x2160.jpg /usr/share/backgrounds
   gsettings set org.gnome.desktop.background picture-uri file:///usr/share/backgrounds/mountains_lake_clouds_117489_3840x2160.jpg
 fi
@@ -185,11 +190,11 @@ fi
 if [[ $zenityThemeResult == "vimix" ]]; then
   sudo apt-get update
   git clone https://github.com/DefunctLizard/Vimix-GNOME.git
-  cd /$HOME/spearmint-customizer/Vimix-GNOME/
+  cd /$HOME/spearmint-customizer/Ubuntu/Vimix-GNOME/
   sudo tar -xf vimix-color.tar.xz
-  cd /$HOME/spearmint-customizer/Vimix-GNOME/vimix-color/
+  cd /$HOME/spearmint-customizer/Ubuntu/Vimix-GNOME/vimix-color/
   sudo cp -r vimix /usr/share/themes
-  cd /$HOME/spearmint-customizer/Vimix-GNOME/
+  cd /$HOME/spearmint-customizer/Ubuntu/Vimix-GNOME/
   sudo tar -xf zafiro-icons-Classic-20190428004537.tar.xz
   sudo cp -r zafiro-icons-Classic /usr/share/icons
   gsettings set org.gnome.desktop.interface icon-theme "zafiro-icons-Classic"
@@ -200,4 +205,5 @@ if [[ $zenityThemeResult == "vimix" ]]; then
   gsettings set org.gnome.desktop.wm.preferences button-layout ':minimize,maximize,close'
   gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
   gsettings set org.gnome.shell.extensions.dash-to-dock show-apps-at-top true
+  gsettings set org.gnome.shell.extensions.dash-to-dock transparency-mode 'FIXED'
 fi
