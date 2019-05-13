@@ -15,6 +15,3 @@ if [[ $DISTRIBUTION == *"Ubuntu"* ]]; then
   chmod +x setup.sh
   ./setup.sh
 fi
-
-if [[ $DISTRIBUTION == "unknown"]]; then
-  echo "could not detect distribution"
