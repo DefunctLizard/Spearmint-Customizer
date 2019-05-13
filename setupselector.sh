@@ -1,7 +1,5 @@
 #!/bin/bash
 
-DISTRIBUTION=unknown
-
 DISTRIBUTION=$( cat /etc/os-release )
 
 if [[ $DISTRIBUTION == *"Debian"* ]]; then
