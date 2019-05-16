@@ -46,7 +46,7 @@ else
   fi
   
   if [[ $zenitydistroResult == *"Debian Based (GNOME not installed)"* ]]; then
-    cd /$HOME/spearmint-customizer/Debian/9/
+    cd /$HOME/spearmint-customizer/Debian/unknown/setup.sh
     chmod +x setup.sh
     ./setup.sh
   fi
