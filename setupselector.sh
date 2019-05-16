@@ -5,7 +5,7 @@ DISTRIBUTION=unknown
 DISTRIBUTION=$( cat /etc/os-release )
 
 if [[ $DISTRIBUTION == *"Ubuntu 19.04"* ]]; then
-  cd /$HOME/spearmint-customizer/Ubuntu/19.04/
+  cd /$HOME/spearmint-customizer/Ubuntu/9/
   chmod +x setup.sh
   ./setup.sh
 fi
