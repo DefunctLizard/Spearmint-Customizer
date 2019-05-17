@@ -32,22 +32,21 @@ else
         "Debian 9" \
         "Debian Based (GNOME not installed)" \
   )
-  
+
   if [[ $zenitydistroResult == "Ubuntu 19.04" ]]; then
     cd /$HOME/spearmint-customizer/Ubuntu/19.04/
     chmod +x setup.sh
     ./setup.sh
   fi
-  
-  if [[ $zenitydistroResult == *"Debian"* ]]; then
+
+  if [[ $zenitydistroResult == "Debian" ]]; then
     cd /$HOME/spearmint-customizer/Debian/9/
     chmod +x setup.sh
     ./setup.sh
   fi
-  
-  if [[ $zenitydistroResult == *"Debian Based (GNOME not installed)"* ]]; then
+
+  if [[ $zenitydistroResult == "Debian Based (GNOME not installed)" ]]; then
     cd /$HOME/spearmint-customizer/Debian/unknown/setup.sh
     chmod +x setup.sh
     ./setup.sh
   fi
-    
