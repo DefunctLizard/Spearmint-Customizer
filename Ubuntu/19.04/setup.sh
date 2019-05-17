@@ -86,6 +86,7 @@ zenityThemeResult=$(
 
 if [[ $zenityThemeResult == "spearmint-default" ]]; then
   sudo apt-get update
+  cd /$HOME/spearmint-customizer/Ubuntu/19.04/
   sudo git clone https://github.com/DefunctLizard/spearmint-default-GNOME.git
   sudo apt install arc-theme -yy
   gsettings set org.gnome.desktop.interface gtk-theme "Arc-Darker"
@@ -97,7 +98,6 @@ if [[ $zenityThemeResult == "spearmint-default" ]]; then
   gsettings set org.gnome.shell.extensions.dash-to-dock extend-height false
   gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
   gsettings set org.gnome.desktop.wm.preferences button-layout ':minimize,maximize,close'
-  cd /$HOME/spearmint-customizer/spearmint-default-GNOME/
   sudo cp mountains_lake_tops_129263_3840x2160.jpg /usr/share/backgrounds
   gsettings set org.gnome.desktop.background picture-uri file:///usr/share/backgrounds/mountains_lake_tops_129263_3840x2160.jpg
   sudo tar -xf Flat-Remix-Blue_1.90.tar.xz
@@ -107,14 +107,15 @@ fi
 
 if [[ $zenityThemeResult == "macOS-dark" ]]; then
   sudo apt-get update
+  cd /$HOME/spearmint-customizer/Ubuntu/19.04/
   git clone https://github.com/DefunctLizard/macOS-GNOME.git
-  cd /$HOME/spearmint-customizer/macOS-GNOME
+  cd /$HOME/spearmint-customizer/Ubuntu/19.04/macOS-GNOME
   mkdir OSX_ONE
-  sudo tar -xf OSX_ONE9.2.tar.xz --directory /$HOME/spearmint-customizer/macOS-GNOME/OSX_ONE
-  cd /$HOME/spearmint-customizer/macOS-GNOME/OSX_ONE
+  sudo tar -xf OSX_ONE9.2.tar.xz --directory /$HOME/spearmint-customizer/Ubuntu/19.04/macOS-GNOME/OSX_ONE
+  cd /$HOME/spearmint-customizer/Ubuntu/19.04/macOS-GNOME/OSX_ONE
   sudo cp -r OSX_ONE /usr/share/icons
   gsettings set org.gnome.desktop.interface icon-theme "OSX_ONE"
-  cd /$HOME/spearmint-customizer/macOS-GNOME/
+  cd /$HOME/spearmint-customizer/Ubuntu/19.04/macOS-GNOME/
   sudo cp mojave-night.jpg /usr/share/backgrounds
   sudo tar -xf Mojave-dark.tar.xz
   sudo cp -r Mojave-dark /usr/share/themes/
@@ -132,14 +133,15 @@ fi
 
 if [[ $zenityThemeResult == "macOS-light" ]]; then
   sudo apt-get update
+  cd /$HOME/spearmint-customizer/Ubuntu/19.04/
   git clone https://github.com/DefunctLizard/macOS-light-GNOME.git
-  cd /$HOME/spearmint-customizer/macOS-light-GNOME/
+  cd /$HOME/spearmint-customizer/Ubuntu/19.04/macOS-light-GNOME/
   mkdir OSX_ONE
-  sudo tar -xf OSX_ONE9.2.tar.xz --directory /$HOME/spearmint-customizer/macOS-light-GNOME/OSX_ONE
-  cd /$HOME/spearmint-customizer/macOS-light-GNOME/OSX_ONE
+  sudo tar -xf OSX_ONE9.2.tar.xz --directory /$HOME/spearmint-customizer/Ubuntu/19.04/macOS-light-GNOME/OSX_ONE
+  cd /$HOME/spearmint-customizer/Ubuntu/19.04/macOS-light-GNOME/OSX_ONE
   sudo cp -r OSX_ONE /usr/share/icons
   gsettings set org.gnome.desktop.interface icon-theme "OSX_ONE"
-  cd /$HOME/spearmint-customizer/macOS-light-GNOME/
+  cd /$HOME/spearmint-customizer/Ubuntu/19.04/macOS-light-GNOME/
   sudo cp mojave-day.jpg /usr/share/backgrounds
   sudo tar -xf Mojave-light.tar.xz
   sudo cp -r Mojave-light /usr/share/themes/
