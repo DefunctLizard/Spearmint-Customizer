@@ -8,7 +8,7 @@ GNOME_VER=$(gnome-shell --version)
 
 DISTRIBUTION=$( cat /etc/os-release )
 
-if [[ $GNOME_VER == *"gnome"* ]]; then
+if [[ $GNOME_VER == *"GNOME"* ]]; then
   echo "GNOME is detected"
   if [[ $DISTRIBUTION == *"Ubuntu 19.04"* ]]; then
     cd /$HOME/spearmint-customizer/Ubuntu/19.04/
