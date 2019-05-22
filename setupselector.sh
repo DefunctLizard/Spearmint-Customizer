@@ -28,7 +28,10 @@ if [[ $GNOME_VER == *"gnome"* ]]; then
     ./setup.sh
   fi
 else
-  cd /$HOME/spearmint-customizer/Debian/Raspberry_Pi/
-  chmod +x setup.sh
-  ./setup.sh
+  echo "GNOME was not detected"
+  if [[ $DISTRIBUTION == *"Debian"* ]]; then
+    cd /$HOME/spearmint-customizer/Debian/gnomeless/
+    chmod +x setup.sh
+    ./setup.sh
+  fi
 fi
