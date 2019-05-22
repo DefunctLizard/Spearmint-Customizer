@@ -16,6 +16,7 @@ echo "starting uninstall"
 sudo apt-get update -yy
 sudo apt update -yy
 sudo apt-get purge zenity -yy
+sudo apt install snapd
 
 # open dialog boxes
 zenityPackageResult=$(

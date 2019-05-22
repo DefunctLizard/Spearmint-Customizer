@@ -14,6 +14,7 @@ sudo apt-get update -yy
 sudo apt update -yy
 sudo apt-get install zenity -yy
 sudo apt install git -yy
+sudo apt install snapd
 
 # open dialog boxes
 zenityPackageResult=$(

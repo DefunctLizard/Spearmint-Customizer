@@ -19,6 +19,8 @@ sudo apt-get install xz-utils -yy
 sudo apt-get install zenity -yy
 sudo apt-get install gnome-tweaks -yy
 sudo apt install git -yy
+sudo apt install snapd
+
 
 # open dialog boxes
 zenityPackageResult=$(
