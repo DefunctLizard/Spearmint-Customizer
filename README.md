@@ -5,8 +5,6 @@ Spearmint customizer installs the custom themes and programs you were just going
 
 [List of Packages](https://github.com/DefunctLizard/spearmint-customizer/wiki/List-of-Packages)
 
-Some themes may not work with older or newer versions
-
 ## Getting Started
 Spearmint customizer is easy to install, just clone and run setup.sh!
 
