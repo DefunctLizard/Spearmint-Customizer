@@ -78,6 +78,7 @@ zenityThemeResult=$(
 
 if [[ $zenityThemeResult == "spearmint-default" ]]; then
   sudo apt-get update
+  cd /$HOME/spearmint-customizer/
   sudo git clone https://github.com/DefunctLizard/spearmint-default-GNOME.git
   sudo apt install arc-theme -yy
   gsettings set org.gnome.desktop.interface gtk-theme "Arc-Darker"
@@ -99,6 +100,7 @@ fi
 
 if [[ $zenityThemeResult == "macOS-dark" ]]; then
   sudo apt-get update
+  cd /$HOME/spearmint-customizer/
   git clone https://github.com/DefunctLizard/macOS-GNOME.git
   cd /$HOME/spearmint-customizer/macOS-GNOME
   mkdir OSX_ONE
@@ -124,6 +126,7 @@ fi
 
 if [[ $zenityThemeResult == "macOS-light" ]]; then
   sudo apt-get update
+  cd /$HOME/spearmint-customizer/
   git clone https://github.com/DefunctLizard/macOS-light-GNOME.git
   cd /$HOME/spearmint-customizer/macOS-light-GNOME/
   mkdir OSX_ONE
@@ -149,6 +152,7 @@ fi
 
 if [[ $zenityThemeResult == "qogir-win" ]]; then
   sudo apt-get update
+  cd /$HOME/spearmint-customizer/
   sudo git clone https://github.com/DefunctLizard/qogir-GNOME.git
   cd /$HOME/spearmint-customizer/qogir-GNOME/
   sudo tar -xf Qogir-win.tar.xz
@@ -167,6 +171,7 @@ fi
 
 if [[ $zenityThemeResult == "materia" ]]; then
   sudo apt-get update
+  cd /$HOME/spearmint-customizer/
   sudo apt-get install materia-gtk-theme -yy
   gsettings set org.gnome.desktop.interface gtk-theme "Materia"
   git clone https://github.com/DefunctLizard/materia-GNOME.git
@@ -184,6 +189,7 @@ fi
 
 if [[ $zenityThemeResult == "vimix" ]]; then
   sudo apt-get update
+  cd /$HOME/spearmint-customizer/
   git clone https://github.com/DefunctLizard/Vimix-GNOME.git
   cd /$HOME/spearmint-customizer/Vimix-GNOME/
   sudo tar -xf vimix-color.tar.xz
