@@ -184,6 +184,7 @@ fi
 
 if [[ $zenityThemeResult == "vimix" ]]; then
   sudo apt-get update
+  cd /$HOME/spearmint-customizer/
   git clone https://github.com/DefunctLizard/Vimix-GNOME.git
   cd /$HOME/spearmint-customizer/Vimix-GNOME/
   sudo tar -xf vimix-color.tar.xz
