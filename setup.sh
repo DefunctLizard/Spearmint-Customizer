@@ -2,8 +2,6 @@
 
 DISTRIBUTION=unknown
 
-zenitydistroResult=unknown
-
 GNOME_VER=$( gnome-shell --version )
 
 DISTRIBUTION=$( cat /etc/os-release )
