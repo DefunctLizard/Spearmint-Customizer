@@ -33,4 +33,10 @@ else
     chmod +x setup.sh
     ./setup.sh
   fi
+
+  if [[ $DISTRIBUTION == *"Ubuntu"* ]]; then
+    cd /$HOME/spearmint-customizer/Ubuntu/gnomeless/
+    chmod +x setup.sh
+    ./setup.sh
+  fi
 fi
