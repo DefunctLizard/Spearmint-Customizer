@@ -19,7 +19,7 @@ sudo apt install git -yy
 
 # open dialog boxes
 zenityPackageResult=$(
-  zenity --list --checklist --title="Choose Packages to uninstall" --width="1000" --height="400" \
+  zenity --list --checklist --title="Choose Packages to Uninstall" --width="1000" --height="400" \
          --column="Select" --column="Package Name" --column="Description" \
          " " "gimp" "Known as GIMP, GNU Image Manipulation Program is a free and open source photo editor." \
          " " "neofetch" "A command-line system information tool." \
