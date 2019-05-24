@@ -1,7 +1,4 @@
 #!/bin/bash
-
-echo "starting uninstall"
-
    #################################################################
    #                                                               #
    #                 Spearmint Customizer                          #
@@ -12,15 +9,17 @@ echo "starting uninstall"
    #                                                               #
    #################################################################
 
-# update packages and purge essentials
+# update packages and install essentials
 sudo apt-get update -yy
 sudo apt update -yy
-sudo apt-get purge zenity -yy
-sudo apt install snapd
+sudo apt-get install xz-utils -yy
+sudo apt-get install zenity -yy
+sudo apt-get install gnome-tweaks -yy
+sudo apt install git -yy
 
 # open dialog boxes
 zenityPackageResult=$(
-  zenity --list --checklist --title="Choose Packages to Unpurge" --width="1000" --height="400" \
+  zenity --list --checklist --title="Choose Packages to uninstall" --width="1000" --height="400" \
          --column="Select" --column="Package Name" --column="Description" \
          " " "gimp" "Known as GIMP, GNU Image Manipulation Program is a free and open source photo editor." \
          " " "neofetch" "A command-line system information tool." \
@@ -30,8 +29,6 @@ zenityPackageResult=$(
          " " "vim-editor" "VIM is a free and open-source command-line text editor" \
          " " "inkscape" "Inkscape is a free and open-source vector graphics editor." \
          " " "chromium" "Chromium is Google's open-source web browser project." \
-         " " "atom" "Atom is a text editor developed by GitHub." \
-         " " "gnome-tweaks" "Gnome-Tweaks lets you edit the appearance of GNOME." \
 )
 
 # Wildcards (*) around the result will find matches.
@@ -41,6 +38,7 @@ fi
 
 if [[ $zenityPackageResult == *"neofetch"* ]]; then
   sudo apt purge neofetch -yy
+  sed -i '104d' ~/.bashrc
 fi
 
 if [[ $zenityPackageResult == *"caffeine"* ]]; then
@@ -64,13 +62,5 @@ if [[ $zenityPackageResult == *"inkscape"* ]]; then
 fi
 
 if [[ $zenityPackageResult == *"chromium"* ]]; then
-  sudo apt purge -y chromium-browser -yy
-fi
-
-if [[ $zenityPackageResult == *"atom"* ]]; then
-  sudo snap purge atom --classic
-fi
-
-if [[ $zenityPackageResult == *"gnome-tweaks"* ]]; then
-  sudo apt-get purge gnome-tweaks
+  sudo apt purge chromium-browser -yy
 fi
