@@ -38,7 +38,7 @@ fi
 
 if [[ $zenityPackageResult == *"neofetch"* ]]; then
   sudo apt purge neofetch -yy
-  sed -i '104d' ~/.bashrc
+  sed -i '118d' ~/.bashrc
 fi
 
 if [[ $zenityPackageResult == *"caffeine"* ]]; then
