@@ -25,7 +25,7 @@ zenityPackageResult=$(
 
 # Wildcards (*) around the result will find matches.
 if [[ $zenityPackageResult == *"gimp"* ]]; then
-   brew install cask gimp
+   brew cask install gimp
 fi
 
 if [[ $zenityPackageResult == *"neofetch"* ]]; then
@@ -44,4 +44,3 @@ if [[ $zenityPackageResult == *"inkscape"* ]]; then
   brew cask install xquartz
   brew cask install inkscape
 fi
-
