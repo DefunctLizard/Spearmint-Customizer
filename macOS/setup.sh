@@ -28,23 +28,23 @@ zenityPackageResult=$(
 
 # Wildcards (*) around the result will find matches.
 if [[ $zenityPackageResult == *"gimp"* ]]; then
-  sudo brew install gimp
+   brew install gimp
 fi
 
 if [[ $zenityPackageResult == *"neofetch"* ]]; then
-  sudo brew install neofetch
+  brew install neofetch
   echo "neofetch" >> ~/.bashrc
 fi
 
 if [[ $zenityPackageResult == *"vlc-media-player"* ]]; then
-  sudo brew install vlc
+  brew install vlc
 fi
 
 if [[ $zenityPackageResult == *"vim-editor"* ]]; then
-  sudo brew install vim
+  brew install vim
 fi
 
 if [[ $zenityPackageResult == *"inkscape"* ]]; then
-  sudo brew install inkscape
+  brew install inkscape
 fi
 
