@@ -9,11 +9,8 @@
    #                                                               #
    #################################################################
 
-# update packages and install essentials
-sudo apt-get update -yy
-sudo apt update -yy
-sudo apt-get install zenity -yy
-sudo apt install snapd
+# install essentials
+brew install zenity
 
 # open dialog boxes
 zenityPackageResult=$(
@@ -28,16 +25,15 @@ zenityPackageResult=$(
 
 # Wildcards (*) around the result will find matches.
 if [[ $zenityPackageResult == *"gimp"* ]]; then
-   brew install gimp
+   brew install cask gimp
 fi
 
 if [[ $zenityPackageResult == *"neofetch"* ]]; then
   brew install neofetch
-  echo "neofetch" >> ~/.bashrc
 fi
 
 if [[ $zenityPackageResult == *"vlc-media-player"* ]]; then
-  brew install vlc
+  brew cask install vlc
 fi
 
 if [[ $zenityPackageResult == *"vim-editor"* ]]; then
@@ -45,6 +41,7 @@ if [[ $zenityPackageResult == *"vim-editor"* ]]; then
 fi
 
 if [[ $zenityPackageResult == *"inkscape"* ]]; then
-  brew install inkscape
+  brew cask install xquartz
+  brew cask install inkscape
 fi
 
