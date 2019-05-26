@@ -31,10 +31,9 @@ Now, run setup.sh
 ./setup.sh
 ```
 ## Authors
-Grant Handy
 
+### Grant Handy
 (Defunct Lizard)
 
-Cliff Crosland
-
+### Cliff Crosland
 (cliffcrosland)
