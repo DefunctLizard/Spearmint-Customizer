@@ -33,7 +33,7 @@ Now, run setup.sh
 ## Authors
 
 ### Grant Handy
-(Defunct Lizard)
+[(Defunct Lizard)](https://github.com/DefunctLizard)
 
 ### Cliff Crosland
-(cliffcrosland)
+[(cliffcrosland)](https://github.com/cliffcrosland)
