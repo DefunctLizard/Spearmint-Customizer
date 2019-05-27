@@ -28,6 +28,15 @@ if [[ $GNOME_VER == *"GNOME"* ]]; then
 
 else
   echo "GNOME was not detected"
+  while true; do
+      read -p "Are you running macOS?" yn
+      case $yn in
+          [Yy]* ) cd /$HOME/spearmint-customizer/macOS; chmod +x setup.sh; ./setup.sh; break;;
+          [Nn]* ) echo "could not detect OS"; exit;;
+          * ) echo "Please answer yes or no.";;
+      esac
+  done
+
   if [[ $DISTRIBUTION == *"Debian"* ]]; then
     cd /$HOME/spearmint-customizer/Debian/gnomeless/
     chmod +x setup.sh
@@ -39,4 +48,4 @@ else
     chmod +x setup.sh
     ./setup.sh
   fi
-fi || echo "I work"
+fi
