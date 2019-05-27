@@ -62,7 +62,7 @@ if [[ $zenityPackageResult == *"inkscape"* ]]; then
 fi
 
 if [[ $zenityPackageResult == *"chromium"* ]]; then
-  sudo apt install -y chromium-browser -yy
+  sudo apt install -y chromium
 fi
 
 zenityThemeResult=$(
