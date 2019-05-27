@@ -29,7 +29,7 @@ if [[ $GNOME_VER == *"GNOME"* ]]; then
 else
   echo "GNOME was not detected"
   while true; do
-      read -p "Are you running macOS?" yn
+      read -p "Are you running macOS? (y or n)" yn
       case $yn in
           [Yy]* ) cd /$HOME/spearmint-customizer/macOS; chmod +x setup.sh; ./setup.sh; break;;
           [Nn]* ) echo "could not detect OS"; exit;;
