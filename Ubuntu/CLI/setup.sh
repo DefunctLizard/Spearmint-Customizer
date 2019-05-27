@@ -9,15 +9,34 @@
    #                                                               #
    #################################################################
 
+echo "Please make sure you edit setup.sh to select the packages you want to install"
+
+# PLEASE UN-COMMENT THE THEMES AND PACKAGES YOU WANT TO INSTALL
+zenityPackageResult=(
+#gimp
+#neofetch
+#caffeine
+#bleachbit
+#vlc-media-player
+#vim-editor
+#inkscape
+#chromium
+)
+
+zenitythemeResult=(
+#spearmit-default
+#macOS-dark
+#macOS-light
+#qogir-win
+#materia
+#vimix
+)
+
 # update packages and install essentials
 sudo apt-get update -yy
 sudo apt update -yy
 sudo apt-get install xz-utils -yy
 sudo apt install git -yy
-
-# PLEASE UN-COMMENT THE THEMES AND PACKAGES YOU WANT TO INSTALL
-zenityPackageResult=(gimp)
-
 
 if [[ $zenityPackageResult == *"gimp"* ]]; then
   sudo apt-get install gimp -yy
