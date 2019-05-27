@@ -1,5 +1,5 @@
 # Spearmint-Customizer
-Spearmint customizer installs the custom themes and programs you were just going to do anyway in Linux (and soon macOS!).
+Spearmint customizer installs the custom themes and programs you were just going to do anyway in Linux and macOS.
 
 [List of Themes](https://github.com/DefunctLizard/spearmint-customizer/wiki/List-of-custom-themes)
 
