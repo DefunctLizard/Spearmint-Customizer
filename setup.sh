@@ -40,7 +40,7 @@ else
     ./setup.sh
   fi
 
-  if [[ $DISTRIBUTION == "cat: /etc/os-release: No such file or directory" ]]; then
+  if [[ $DISTRIBUTION == *"cat: /etc/os-release: No such file or directory"* ]]; then
     echo "starting macOS setup"
     cd /$HOME/spearmint-customizer/macOS
     chmod +x setup.sh
