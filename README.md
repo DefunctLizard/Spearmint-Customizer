@@ -22,6 +22,10 @@ First, clone the repository.
 ```
 git clone https://github.com/DefunctLizard/spearmint-customizer/
 ```
+Then, navigate to the folder:
+```
+cd /$HOME/spearmint-customizer
+```
 Then, make setup.sh executable:
 ```
 chmod +x setup.sh
