@@ -46,6 +46,6 @@ else
     chmod +x setup.sh
     ./setup.sh
   else
-  echo "the suspected error is correct"
+    echo "the suspected error is correct"
   fi
 fi
