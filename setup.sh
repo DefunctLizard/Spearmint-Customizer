@@ -80,4 +80,4 @@ else
     chmod +x setup.sh
     ./setup.sh
   fi
-fi || cd /$HOME/spearmint-customizer/macOS/; chmod +x setup.sh; ./setup.sh
+fi || echo "I work"
