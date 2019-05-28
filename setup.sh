@@ -6,6 +6,8 @@ GNOME_VER=$( gnome-shell --version )
 
 DISTRIBUTION=$( cat /etc/os-release )
 
+echo "If you do not have a desktop enviroment installed, you must use a CLI setup script."
+
 if [[ $GNOME_VER == *"GNOME"* ]]; then
   echo "GNOME is detected"
   if [[ $DISTRIBUTION == *"Ubuntu 19.04"* ]]; then
