@@ -23,7 +23,7 @@ zenityPackageResult=(
 #chromium
 )
 
-zenitythemeResult=(
+zenityThemeResult=(
 #spearmit-default
 #macOS-dark
 #macOS-light
