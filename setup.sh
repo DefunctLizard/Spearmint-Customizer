@@ -64,9 +64,9 @@ else
     while true; do
         read -p "Are you running macOS? (y or n)" yn
         case $yn in
-            [Dd]* ) cd /$HOME/spearmint-customizer/macOS; chmod +x setup.sh; ./setup.sh; break;;
-            [Uu]* ) echo "could not detect OS"; exit;;
-            * ) echo "Please answer D or U.";;
+            [Yy]* ) cd /$HOME/spearmint-customizer/macOS; chmod +x setup.sh; ./setup.sh; break;;
+            [Nn]* ) echo "could not detect OS"; exit;;
+            * ) echo "Please answer y or n.";;
         esac
     done
   fi
