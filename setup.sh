@@ -75,3 +75,5 @@ else
     ./setup.sh
   fi
 fi
+
+echo "test for tutorial"
