@@ -21,17 +21,11 @@ Copy and paste the following lines of code into the terminal:
 First, clone the repository.
 ```
 git clone https://github.com/DefunctLizard/spearmint-customizer/
+cd spearmint-customizer
 ```
-Then, navigate to the folder:
-```
-cd /$HOME/spearmint-customizer
-```
-Then, make setup.sh executable:
+Then, run the setup.sh executable:
 ```
 chmod +x setup.sh
-```
-Now, run setup.sh
-```
 ./setup.sh
 ```
 ## Authors
