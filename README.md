@@ -1,3 +1,8 @@
+DON'T USE THIS!
+
+Seriously, looking back this thing is a piece of garbage, it's over-complicated, and it's much easier to just go to the [List of Themes](https://github.com/DefunctLizard/spearmint-customizer/wiki/List-of-custom-themes) and install it from there. 
+
+
 # Spearmint-Customizer
 Spearmint customizer installs the custom themes and programs you were just going to do anyway in Linux and macOS.
 
